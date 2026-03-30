@@ -60,12 +60,12 @@ def build_candidates(event: dict) -> list:
         candidates.append(
             {
                 "score": score,
-                "title": f"{favorite} Moneyline",
+                "title": f"Buy {favorite} to win",
                 "line": f"{favorite_ml:+d}",
                 "matchup": matchup,
                 "reason": (
-                    f"{favorite} is a short moneyline favorite, which keeps the market edge intact "
-                    f"without asking for extra margin beyond a straight-up win."
+                    f"Recommendation: buy {favorite} on the moneyline. They sit in the strongest short-favorite zone on the board, "
+                    f"which usually offers the best mix of market support and manageable price without needing a larger margin."
                 ),
             }
         )
@@ -75,12 +75,12 @@ def build_candidates(event: dict) -> list:
         candidates.append(
             {
                 "score": score,
-                "title": f"{favorite} {favorite_spread['point']:+g}",
+                "title": f"Buy {favorite} {favorite_spread['point']:+g}",
                 "line": f"Spread {favorite_spread['point']:+g} at {favorite_spread['price']:+d}",
                 "matchup": matchup,
                 "reason": (
-                    f"The spread stays in a controlled range, which is usually the cleanest zone for favorites "
-                    f"that already have aligned support from the moneyline."
+                    f"Recommendation: buy {favorite} {favorite_spread['point']:+g}. The spread is still inside a controlled range and the moneyline agrees, "
+                    f"which is usually where favorite-side value is most stable."
                 ),
             }
         )
@@ -90,12 +90,12 @@ def build_candidates(event: dict) -> list:
         candidates.append(
             {
                 "score": score,
-                "title": f"{underdog} +{underdog_spread['point']:g}",
+                "title": f"Buy {underdog} +{underdog_spread['point']:g}",
                 "line": f"Spread +{underdog_spread['point']:g} at {underdog_spread['price']:+d}",
                 "matchup": matchup,
                 "reason": (
-                    f"Double-digit cushion at near-standard juice can be valuable in volatile NBA games, "
-                    f"especially when the favorite must win by a large margin to cash."
+                    f"Recommendation: buy {underdog} +{underdog_spread['point']:g}. The number gives a large scoring cushion at near-standard juice, "
+                    f"which can be attractive in NBA games where late swings make big favorites harder to trust."
                 ),
             }
         )

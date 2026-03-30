@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-03-30T18:16:57.031788+00:00",
-  "generated_label": "Mar 30, 2026 11:16 AM PDT",
+  "generated_at": "2026-03-30T18:33:11.948215+00:00",
+  "generated_label": "Mar 30, 2026 11:33 AM PDT",
   "bookmaker_title": "DraftKings",
   "recommendations": [
     {
       "score": 100.0,
-      "title": "Atlanta Hawks Moneyline",
+      "title": "Buy Philadelphia 76ers to win",
       "line": "-135",
-      "matchup": "Boston Celtics at Atlanta Hawks",
-      "reason": "Atlanta Hawks is a short moneyline favorite, which keeps the market edge intact without asking for extra margin beyond a straight-up win."
+      "matchup": "Philadelphia 76ers at Miami Heat",
+      "reason": "Recommendation: buy Philadelphia 76ers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers the best mix of market support and manageable price without needing a larger margin."
     },
     {
-      "score": 97.55,
-      "title": "Philadelphia 76ers Moneyline",
-      "line": "-142",
-      "matchup": "Philadelphia 76ers at Miami Heat",
-      "reason": "Philadelphia 76ers is a short moneyline favorite, which keeps the market edge intact without asking for extra margin beyond a straight-up win."
+      "score": 100.0,
+      "title": "Buy Atlanta Hawks to win",
+      "line": "-135",
+      "matchup": "Boston Celtics at Atlanta Hawks",
+      "reason": "Recommendation: buy Atlanta Hawks on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers the best mix of market support and manageable price without needing a larger margin."
     },
     {
       "score": 84.0,
-      "title": "Detroit Pistons +11.5",
-      "line": "Spread +11.5 at -105",
+      "title": "Buy Detroit Pistons +11.5",
+      "line": "Spread +11.5 at -108",
       "matchup": "Detroit Pistons at Oklahoma City Thunder",
-      "reason": "Double-digit cushion at near-standard juice can be valuable in volatile NBA games, especially when the favorite must win by a large margin to cash."
+      "reason": "Recommendation: buy Detroit Pistons +11.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust."
     }
   ]
 }

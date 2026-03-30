@@ -329,7 +329,7 @@
       <section class="board">
         <div class="tabs">
           <button class="tab-btn active" data-tab="boardPanel">Live Board</button>
-          <button class="tab-btn" data-tab="recsPanel">3 Best Leans</button>
+          <button class="tab-btn" data-tab="recsPanel">3 Best Picks</button>
         </div>
         <div class="board-head">
           <div>
@@ -417,7 +417,7 @@
 
         latestGeneratedLabel = payload.generated_label;
         recNote.textContent =
-          `Updated ${payload.generated_label}. Source: ${payload.bookmaker_title} via The Odds API. These are model leans, not guarantees.`;
+          `Updated ${payload.generated_label}. Source: ${payload.bookmaker_title} via The Odds API. These are data-driven daily recommendations, not guarantees.`;
       }
 
       fetch("./daily-data.json", { cache: "no-store" })
@@ -441,7 +441,7 @@
           boardSub.textContent =
             tabId === "boardPanel"
               ? "Live and upcoming NBA lines from the embedded odds feed."
-              : "Three concise market leans built from today’s consensus lines.";
+              : "Three direct daily picks built from today’s odds and model analysis.";
           statusLabel.textContent =
             tabId === "boardPanel" ? "DraftKings live feed" : latestGeneratedLabel;
         });
