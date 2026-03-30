@@ -7,373 +7,259 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; frame-src https://widget.the-odds-api.com; connect-src 'self'; base-uri 'self'; form-action 'self';"
     />
-    <title>NBA Live Lines</title>
+    <title>NBA Pulse</title>
     <style>
       :root {
-        --bg: #f7f1e8;
-        --panel: rgba(255, 250, 242, 0.88);
-        --ink: #172033;
-        --muted: #5c667a;
-        --line: rgba(23, 32, 51, 0.12);
-        --accent: #d65a31;
-        --accent-2: #0c5c56;
-        --shadow: 0 24px 60px rgba(23, 32, 51, 0.12);
+        --bg-1: #050816;
+        --bg-2: #0b1634;
+        --panel: rgba(8, 18, 41, 0.78);
+        --panel-2: rgba(14, 28, 61, 0.74);
+        --line: rgba(120, 196, 255, 0.18);
+        --text: #eff7ff;
+        --muted: #9cb3d9;
+        --cyan: #6fe8ff;
+        --blue: #4d7cff;
+        --pink: #ff4fd8;
+        --lime: #90ffb6;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html,
       body {
         margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        color: var(--ink);
+        min-height: 100%;
+        color: var(--text);
+        font-family: Arial, sans-serif;
         background:
-          radial-gradient(circle at top left, rgba(214, 90, 49, 0.18), transparent 28%),
-          radial-gradient(circle at top right, rgba(12, 92, 86, 0.16), transparent 24%),
-          linear-gradient(180deg, #fbf8f3 0%, var(--bg) 100%);
+          radial-gradient(circle at 20% 20%, rgba(77, 124, 255, 0.2), transparent 28%),
+          radial-gradient(circle at 80% 12%, rgba(255, 79, 216, 0.18), transparent 24%),
+          radial-gradient(circle at 60% 78%, rgba(111, 232, 255, 0.12), transparent 24%),
+          linear-gradient(145deg, var(--bg-1) 0%, var(--bg-2) 54%, #040713 100%);
       }
 
-      .shell {
-        max-width: 1200px;
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 34px 34px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 95%);
+        pointer-events: none;
+      }
+
+      .wrap {
+        max-width: 1320px;
         margin: 0 auto;
-        padding: 32px 20px 48px;
+        padding: 28px 18px 40px;
       }
 
       .hero {
         display: grid;
-        gap: 18px;
-        grid-template-columns: 1.4fr 0.9fr;
-        align-items: start;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 20px;
+        align-items: stretch;
       }
 
       .hero-card,
-      .controls,
-      .widget-card,
-      .notes {
-        background: var(--panel);
+      .stat-card,
+      .board {
+        position: relative;
+        overflow: hidden;
         border: 1px solid var(--line);
-        border-radius: 24px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(10, 20, 45, 0.9), var(--panel));
         box-shadow: var(--shadow);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(18px);
       }
 
       .hero-card {
         padding: 28px;
-        min-height: 280px;
-        position: relative;
-        overflow: hidden;
+        min-height: 240px;
       }
 
-      .hero-card::after {
+      .hero-card::after,
+      .stat-card::after,
+      .board::after {
         content: "";
         position: absolute;
-        inset: auto -60px -80px auto;
+        inset: auto -80px -80px auto;
         width: 220px;
         height: 220px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(214, 90, 49, 0.18), transparent 70%);
+        background: radial-gradient(circle, rgba(111, 232, 255, 0.18), transparent 70%);
+        pointer-events: none;
       }
 
       .eyebrow {
         display: inline-flex;
-        padding: 6px 12px;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
         border-radius: 999px;
-        background: rgba(12, 92, 86, 0.1);
-        color: var(--accent-2);
-        font: 700 12px/1.2 Arial, sans-serif;
-        letter-spacing: 0.14em;
+        background: rgba(111, 232, 255, 0.08);
+        border: 1px solid rgba(111, 232, 255, 0.18);
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
       }
 
       h1 {
-        margin: 14px 0 12px;
-        font-size: clamp(2.3rem, 5vw, 4.5rem);
-        line-height: 0.95;
-        letter-spacing: -0.04em;
+        margin: 16px 0 14px;
+        font-size: clamp(2.8rem, 7vw, 5.8rem);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
       }
 
       .lede {
-        max-width: 54ch;
+        max-width: 44ch;
         margin: 0;
         color: var(--muted);
-        font-size: 1.05rem;
-        line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.65;
       }
 
-      .meta-grid {
+      .stats {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 24px;
+        gap: 20px;
       }
 
-      .meta {
-        padding: 14px 16px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.62);
-        border: 1px solid rgba(23, 32, 51, 0.08);
-      }
-
-      .meta-label {
-        font: 700 11px/1.2 Arial, sans-serif;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      .meta-value {
-        margin-top: 8px;
-        font-size: 1.05rem;
-        font-weight: 700;
-      }
-
-      .controls {
+      .stat-card {
         padding: 22px;
+        background: linear-gradient(180deg, rgba(15, 30, 66, 0.9), var(--panel-2));
       }
 
-      .controls h2,
-      .widget-card h2,
-      .notes h2 {
-        margin: 0 0 14px;
-        font: 700 1rem/1.2 Arial, sans-serif;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .controls p,
-      .notes p,
-      .notes li {
-        margin: 0;
+      .stat-label {
         color: var(--muted);
-        font: 400 0.98rem/1.55 Arial, sans-serif;
-      }
-
-      .controls-grid {
-        display: grid;
-        gap: 14px;
-        margin-top: 14px;
-      }
-
-      label {
-        display: block;
-        font: 700 12px/1.2 Arial, sans-serif;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 8px;
-      }
-
-      input,
-      select,
-      button {
-        width: 100%;
-        border: 1px solid rgba(23, 32, 51, 0.16);
-        border-radius: 14px;
-        padding: 14px 16px;
-        font: 400 15px/1.2 Arial, sans-serif;
-        background: white;
-        color: var(--ink);
-      }
-
-      button {
-        border: 0;
-        background: linear-gradient(135deg, var(--accent), #e89957);
-        color: white;
+        font-size: 11px;
         font-weight: 700;
-        cursor: pointer;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
       }
 
-      button.secondary {
-        background: rgba(12, 92, 86, 0.12);
-        color: var(--accent-2);
+      .stat-value {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        font-weight: 700;
       }
 
-      .controls-actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+      .stat-glow {
+        color: var(--lime);
+        text-shadow: 0 0 16px rgba(144, 255, 182, 0.45);
+      }
+
+      .board {
+        margin-top: 20px;
+        padding: 18px;
+      }
+
+      .board-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-end;
+        padding: 6px 6px 16px;
+      }
+
+      .board-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .board-sub {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
       }
 
       .status {
-        margin-top: 12px;
-        min-height: 22px;
-        color: var(--muted);
-        font: 400 0.95rem/1.4 Arial, sans-serif;
-      }
-
-      .main-grid {
-        display: grid;
-        grid-template-columns: 1.5fr 0.9fr;
-        gap: 20px;
-        margin-top: 20px;
-      }
-
-      .widget-card {
-        padding: 22px;
+        color: var(--cyan);
+        font-size: 0.92rem;
+        text-align: right;
       }
 
       iframe {
         width: 100%;
-        min-height: 900px;
-        border: 1px solid rgba(23, 32, 51, 0.08);
-        border-radius: 20px;
-        background: white;
+        min-height: 980px;
+        border: 1px solid rgba(111, 232, 255, 0.12);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.98);
       }
 
-      .widget-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        align-items: end;
-        margin-bottom: 16px;
-      }
-
-      .widget-head p {
-        margin: 0;
-        color: var(--muted);
-        font: 400 0.95rem/1.5 Arial, sans-serif;
-      }
-
-      .notes {
-        padding: 22px;
-        height: fit-content;
-      }
-
-      .notes ul {
-        padding-left: 18px;
-        margin: 12px 0 0;
-      }
-
-      .notes a {
-        color: var(--accent-2);
-      }
-
-      @media (max-width: 920px) {
-        .hero,
-        .main-grid,
-        .meta-grid,
-        .controls-actions {
+      @media (max-width: 980px) {
+        .hero {
           grid-template-columns: 1fr;
         }
 
         iframe {
-          min-height: 760px;
+          min-height: 820px;
         }
       }
     </style>
   </head>
   <body>
-    <main class="shell">
+    <main class="wrap">
       <section class="hero">
         <article class="hero-card">
-          <div class="eyebrow">Daily board</div>
-          <h1>NBA Live Lines</h1>
+          <div class="eyebrow">Live NBA board</div>
+          <h1>NBA<br />Pulse</h1>
           <p class="lede">
-            A focused one-page scoreboard for today’s NBA slate with live and upcoming odds,
-            point spread, and bookmaker selection. Built as a static site so it can run
-            without a backend in this workspace.
+            Daily live NBA games with real-time moneyline and spread movement in a cleaner,
+            high-contrast futuristic view.
           </p>
-          <div class="meta-grid">
-            <div class="meta">
-              <div class="meta-label">Date</div>
-              <div class="meta-value" id="todayLabel"></div>
-            </div>
-            <div class="meta">
-              <div class="meta-label">Region</div>
-              <div class="meta-value">US books</div>
-            </div>
-            <div class="meta">
-              <div class="meta-label">Markets</div>
-              <div class="meta-value">Moneyline + spread</div>
-            </div>
-          </div>
         </article>
 
-        <aside class="controls">
-          <h2>Setup</h2>
-          <p>
-            Enter your The Odds API widget access key to load live and upcoming NBA lines.
-            By default the key is kept only for the current browser tab.
-          </p>
-          <div class="controls-grid">
-            <div>
-              <label for="accessKey">Access key</label>
-              <input id="accessKey" type="password" placeholder="Paste widget access key" />
-            </div>
-            <div>
-              <label for="bookmaker">Bookmaker</label>
-              <select id="bookmaker">
-                <option value="draftkings">DraftKings</option>
-                <option value="fanduel">FanDuel</option>
-                <option value="betmgm">BetMGM</option>
-                <option value="caesars">Caesars</option>
-              </select>
-            </div>
-            <div>
-              <label for="rememberKey">Key storage</label>
-              <select id="rememberKey">
-                <option value="session">This tab only</option>
-                <option value="local">Remember on this device</option>
-              </select>
-            </div>
-            <div class="controls-actions">
-              <button id="loadBtn">Load board</button>
-              <button class="secondary" id="clearBtn" type="button">Clear key</button>
-            </div>
-          </div>
-          <div class="status" id="status">
-            Waiting for an access key.
-          </div>
-        </aside>
+        <section class="stats">
+          <article class="stat-card">
+            <div class="stat-label">Date</div>
+            <div class="stat-value" id="todayLabel"></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">Market focus</div>
+            <div class="stat-value">Moneyline + Spread</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">Status</div>
+            <div class="stat-value stat-glow" id="liveStatus">Streaming live odds</div>
+          </article>
+        </section>
       </section>
 
-      <section class="main-grid">
-        <article class="widget-card">
-          <div class="widget-head">
-            <div>
-              <h2>Live Odds Board</h2>
-              <p>
-                Powered by The Odds API official widget for live and upcoming NBA events.
-              </p>
-            </div>
+      <section class="board">
+        <div class="board-head">
+          <div>
+            <p class="board-title">Today’s slate</p>
+            <p class="board-sub">Live and upcoming NBA lines from the embedded odds feed.</p>
           </div>
-          <iframe
-            id="oddsFrame"
-            title="NBA live odds and spreads"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-          ></iframe>
-        </article>
-
-        <aside class="notes">
-          <h2>Notes</h2>
-          <p>
-            This version uses the official widget route so the site stays backend-free and
-            deployable as plain static files.
-          </p>
-          <ul>
-            <li>Source for odds/spreads: <a href="https://the-odds-api.com/widget/" target="_blank" rel="noreferrer">The Odds API widget docs</a>.</li>
-            <li>NBA sport key used by the widget: <code>basketball_nba</code>.</li>
-            <li>Markets shown: moneyline and spreads.</li>
-            <li>The site never sends your key to our own server. It is used only in the embedded widget URL from The Odds API.</li>
-            <li>If the board is empty, confirm your key, the sport is in season, and the selected bookmaker has listed games.</li>
-            <li>For a future custom backend, move the odds fetch behind a server and keep raw API keys server-side.</li>
-          </ul>
-        </aside>
+          <div class="status" id="statusLabel">DraftKings feed</div>
+        </div>
+        <iframe
+          id="oddsFrame"
+          title="NBA live odds and spreads"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
       </section>
     </main>
 
     <script>
-      const storageKey = "nba-live-lines-access-key";
-      const bookmakerKey = "nba-live-lines-bookmaker";
-      const storageModeKey = "nba-live-lines-storage-mode";
-      const accessKeyInput = document.getElementById("accessKey");
-      const bookmakerInput = document.getElementById("bookmaker");
-      const rememberKeyInput = document.getElementById("rememberKey");
-      const statusEl = document.getElementById("status");
-      const frameEl = document.getElementById("oddsFrame");
+      const ACCESS_KEY = "wk_609139e0711796ddc1b914808cd87a6d";
+      const BOOKMAKER = "draftkings";
       const todayLabel = document.getElementById("todayLabel");
+      const statusLabel = document.getElementById("statusLabel");
+      const liveStatus = document.getElementById("liveStatus");
+      const frameEl = document.getElementById("oddsFrame");
 
       todayLabel.textContent = new Intl.DateTimeFormat("en-US", {
         weekday: "short",
@@ -381,10 +267,10 @@
         day: "numeric",
       }).format(new Date());
 
-      function buildWidgetUrl(accessKey, bookmaker) {
+      function buildWidgetUrl() {
         const params = new URLSearchParams({
-          accessKey,
-          bookmakerKeys: bookmaker,
+          accessKey: ACCESS_KEY,
+          bookmakerKeys: BOOKMAKER,
           oddsFormat: "american",
           markets: "h2h,spreads",
           marketNames: "h2h:Moneyline,spreads:Spread",
@@ -393,64 +279,12 @@
         return `https://widget.the-odds-api.com/v1/sports/basketball_nba/events/?${params.toString()}`;
       }
 
-      function setStatus(message) {
-        statusEl.textContent = message;
-      }
+      frameEl.src = buildWidgetUrl();
+      statusLabel.textContent = "DraftKings live feed";
 
-      function loadBoard() {
-        const accessKey = accessKeyInput.value.trim();
-        const bookmaker = bookmakerInput.value;
-        const storageMode = rememberKeyInput.value;
-
-        if (!accessKey) {
-          frameEl.removeAttribute("src");
-          setStatus("Add a widget access key to load today’s live board.");
-          return;
-        }
-
-        localStorage.setItem(bookmakerKey, bookmaker);
-        localStorage.setItem(storageModeKey, storageMode);
-
-        sessionStorage.removeItem(storageKey);
-        localStorage.removeItem(storageKey);
-
-        if (storageMode === "local") {
-          localStorage.setItem(storageKey, accessKey);
-        } else {
-          sessionStorage.setItem(storageKey, accessKey);
-        }
-
-        frameEl.src = buildWidgetUrl(accessKey, bookmaker);
-        setStatus(`Loaded ${bookmaker} lines. Key storage mode: ${storageMode === "local" ? "remember on this device" : "this tab only"}.`);
-      }
-
-      document.getElementById("loadBtn").addEventListener("click", loadBoard);
-
-      document.getElementById("clearBtn").addEventListener("click", () => {
-        sessionStorage.removeItem(storageKey);
-        localStorage.removeItem(storageKey);
-        accessKeyInput.value = "";
-        frameEl.removeAttribute("src");
-        setStatus("Saved key cleared.");
+      frameEl.addEventListener("load", () => {
+        liveStatus.textContent = "Feed active";
       });
-
-      const savedKey = sessionStorage.getItem(storageKey) || localStorage.getItem(storageKey);
-      const savedBookmaker = localStorage.getItem(bookmakerKey);
-      const savedStorageMode = localStorage.getItem(storageModeKey);
-
-      if (savedKey) {
-        accessKeyInput.value = savedKey;
-      }
-
-      if (savedBookmaker) {
-        bookmakerInput.value = savedBookmaker;
-      }
-
-      if (savedStorageMode) {
-        rememberKeyInput.value = savedStorageMode;
-      }
-
-      loadBoard();
     </script>
   </body>
 </html>
