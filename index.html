@@ -160,6 +160,31 @@
         padding: 18px;
       }
 
+      .tabs {
+        display: inline-flex;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .tab-btn {
+        border: 1px solid rgba(111, 232, 255, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .tab-btn.active {
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(77, 124, 255, 0.28), rgba(255, 79, 216, 0.2));
+        box-shadow: inset 0 0 0 1px rgba(111, 232, 255, 0.14);
+      }
+
       .board-head {
         display: flex;
         justify-content: space-between;
@@ -197,6 +222,67 @@
         background: rgba(255, 255, 255, 0.98);
       }
 
+      .panel {
+        display: none;
+      }
+
+      .panel.active {
+        display: block;
+      }
+
+      .recs {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .rec-card {
+        border: 1px solid rgba(111, 232, 255, 0.14);
+        border-radius: 22px;
+        padding: 20px;
+        background: linear-gradient(180deg, rgba(9, 23, 54, 0.88), rgba(9, 18, 40, 0.86));
+        min-height: 250px;
+      }
+
+      .rec-rank {
+        display: inline-flex;
+        width: 34px;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: var(--bg-1);
+        background: linear-gradient(135deg, var(--cyan), #b0f5ff);
+        font-weight: 700;
+      }
+
+      .rec-title {
+        margin: 16px 0 8px;
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+
+      .rec-line {
+        color: var(--cyan);
+        font-size: 0.98rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .rec-copy {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.96rem;
+        line-height: 1.6;
+      }
+
+      .rec-note {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+
       @media (max-width: 980px) {
         .hero {
           grid-template-columns: 1fr;
@@ -204,6 +290,10 @@
 
         iframe {
           min-height: 820px;
+        }
+
+        .recs {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -237,29 +327,76 @@
       </section>
 
       <section class="board">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="boardPanel">Live Board</button>
+          <button class="tab-btn" data-tab="recsPanel">3 Best Leans</button>
+        </div>
         <div class="board-head">
           <div>
             <p class="board-title">Today’s slate</p>
-            <p class="board-sub">Live and upcoming NBA lines from the embedded odds feed.</p>
+            <p class="board-sub" id="boardSub">Live and upcoming NBA lines from the embedded odds feed.</p>
           </div>
           <div class="status" id="statusLabel">DraftKings feed</div>
         </div>
-        <iframe
-          id="oddsFrame"
-          title="NBA live odds and spreads"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
+        <div class="panel active" id="boardPanel">
+          <iframe
+            id="oddsFrame"
+            title="NBA live odds and spreads"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        <div class="panel" id="recsPanel">
+          <div class="recs">
+            <article class="rec-card">
+              <div class="rec-rank">1</div>
+              <h3 class="rec-title">Heat Moneyline</h3>
+              <div class="rec-line">76ers at Heat: Heat -139 | Spread -2.5</div>
+              <p class="rec-copy">
+                This is the cleanest short favorite on the board. The market only asks Miami
+                to win the game, and the small spread keeps the implied edge aligned with a
+                manageable price instead of forcing a blowout cover.
+              </p>
+            </article>
+            <article class="rec-card">
+              <div class="rec-rank">2</div>
+              <h3 class="rec-title">Hawks -2.5</h3>
+              <div class="rec-line">Celtics at Hawks: Hawks -2.5 | Moneyline -133</div>
+              <p class="rec-copy">
+                Atlanta being installed as the favorite against Boston is a meaningful market
+                signal by itself. When a respected team name is still catching points, the
+                spread often tells the real story, and -2.5 stays below the key 3-point line.
+              </p>
+            </article>
+            <article class="rec-card">
+              <div class="rec-rank">3</div>
+              <h3 class="rec-title">Mavericks -7.5</h3>
+              <div class="rec-line">Timberwolves at Mavericks: Mavericks -7.5 | Moneyline -286</div>
+              <p class="rec-copy">
+                Among the midrange favorites, Dallas offers a stronger favorite profile than
+                the short dogs and less variance than the giant spreads above 12 points. This
+                is the best blend of edge and payout on tonight’s larger favorites.
+              </p>
+            </article>
+          </div>
+          <p class="rec-note">
+            Based on consensus lines for Monday, March 30, 2026 from FantasyData’s NBA odds page.
+            These are market leans, not guaranteed outcomes.
+          </p>
+        </div>
       </section>
     </main>
 
     <script>
       const ACCESS_KEY = "wk_609139e0711796ddc1b914808cd87a6d";
       const BOOKMAKER = "draftkings";
+      const boardSub = document.getElementById("boardSub");
       const todayLabel = document.getElementById("todayLabel");
       const statusLabel = document.getElementById("statusLabel");
       const liveStatus = document.getElementById("liveStatus");
       const frameEl = document.getElementById("oddsFrame");
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const panels = document.querySelectorAll(".panel");
 
       todayLabel.textContent = new Intl.DateTimeFormat("en-US", {
         weekday: "short",
@@ -284,6 +421,20 @@
 
       frameEl.addEventListener("load", () => {
         liveStatus.textContent = "Feed active";
+      });
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const tabId = button.dataset.tab;
+          tabButtons.forEach((item) => item.classList.toggle("active", item === button));
+          panels.forEach((panel) => panel.classList.toggle("active", panel.id === tabId));
+          boardSub.textContent =
+            tabId === "boardPanel"
+              ? "Live and upcoming NBA lines from the embedded odds feed."
+              : "Three concise market leans built from today’s consensus lines.";
+          statusLabel.textContent =
+            tabId === "boardPanel" ? "DraftKings live feed" : "Updated Mar 30, 2026";
+        });
       });
     </script>
   </body>
