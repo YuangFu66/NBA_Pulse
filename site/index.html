@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; frame-src https://widget.the-odds-api.com; connect-src 'self'; base-uri 'self'; form-action 'self';"
+    />
+    <title>NBA Pulse</title>
+    <style>
+      :root {
+        --bg-1: #050816;
+        --bg-2: #0b1634;
+        --panel: rgba(8, 18, 41, 0.78);
+        --panel-2: rgba(14, 28, 61, 0.74);
+        --line: rgba(120, 196, 255, 0.18);
+        --text: #eff7ff;
+        --muted: #9cb3d9;
+        --cyan: #6fe8ff;
+        --blue: #4d7cff;
+        --pink: #ff4fd8;
+        --lime: #90ffb6;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        color: var(--text);
+        font-family: Arial, sans-serif;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(77, 124, 255, 0.2), transparent 28%),
+          radial-gradient(circle at 80% 12%, rgba(255, 79, 216, 0.18), transparent 24%),
+          radial-gradient(circle at 60% 78%, rgba(111, 232, 255, 0.12), transparent 24%),
+          linear-gradient(145deg, var(--bg-1) 0%, var(--bg-2) 54%, #040713 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 34px 34px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 95%);
+        pointer-events: none;
+      }
+
+      .wrap {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 28px 18px 40px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .hero-card,
+      .stat-card,
+      .board {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(10, 20, 45, 0.9), var(--panel));
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero-card {
+        padding: 28px;
+        min-height: 240px;
+      }
+
+      .hero-card::after,
+      .stat-card::after,
+      .board::after {
+        content: "";
+        position: absolute;
+        inset: auto -80px -80px auto;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(111, 232, 255, 0.18), transparent 70%);
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(111, 232, 255, 0.08);
+        border: 1px solid rgba(111, 232, 255, 0.18);
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 16px 0 14px;
+        font-size: clamp(2.8rem, 7vw, 5.8rem);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+      }
+
+      .lede {
+        max-width: 44ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .stats {
+        display: grid;
+        gap: 20px;
+      }
+
+      .stat-card {
+        padding: 22px;
+        background: linear-gradient(180deg, rgba(15, 30, 66, 0.9), var(--panel-2));
+      }
+
+      .stat-label {
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .stat-value {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .stat-glow {
+        color: var(--lime);
+        text-shadow: 0 0 16px rgba(144, 255, 182, 0.45);
+      }
+
+      .board {
+        margin-top: 20px;
+        padding: 18px;
+      }
+
+      .tabs {
+        display: inline-flex;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .tab-btn {
+        border: 1px solid rgba(111, 232, 255, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .tab-btn.active {
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(77, 124, 255, 0.28), rgba(255, 79, 216, 0.2));
+        box-shadow: inset 0 0 0 1px rgba(111, 232, 255, 0.14);
+      }
+
+      .board-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-end;
+        padding: 6px 6px 16px;
+      }
+
+      .board-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .board-sub {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .status {
+        color: var(--cyan);
+        font-size: 0.92rem;
+        text-align: right;
+      }
+
+      iframe {
+        width: 100%;
+        min-height: 980px;
+        border: 1px solid rgba(111, 232, 255, 0.12);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .panel {
+        display: none;
+      }
+
+      .panel.active {
+        display: block;
+      }
+
+      .recs {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .rec-card {
+        border: 1px solid rgba(111, 232, 255, 0.14);
+        border-radius: 22px;
+        padding: 20px;
+        background: linear-gradient(180deg, rgba(9, 23, 54, 0.88), rgba(9, 18, 40, 0.86));
+        min-height: 250px;
+      }
+
+      .rec-rank {
+        display: inline-flex;
+        width: 34px;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: var(--bg-1);
+        background: linear-gradient(135deg, var(--cyan), #b0f5ff);
+        font-weight: 700;
+      }
+
+      .rec-title {
+        margin: 16px 0 8px;
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+
+      .rec-line {
+        color: var(--cyan);
+        font-size: 0.98rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .rec-copy {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.96rem;
+        line-height: 1.6;
+      }
+
+      .rec-note {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        iframe {
+          min-height: 820px;
+        }
+
+        .recs {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <article class="hero-card">
+          <div class="eyebrow">Live NBA board</div>
+          <h1>NBA<br />Pulse</h1>
+          <p class="lede">
+            Daily live NBA games with real-time moneyline and spread movement in a cleaner,
+            high-contrast futuristic view.
+          </p>
+        </article>
+
+        <section class="stats">
+          <article class="stat-card">
+            <div class="stat-label">Date</div>
+            <div class="stat-value" id="todayLabel"></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">Market focus</div>
+            <div class="stat-value">Moneyline + Spread</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">Status</div>
+            <div class="stat-value stat-glow" id="liveStatus">Streaming live odds</div>
+          </article>
+        </section>
+      </section>
+
+      <section class="board">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="boardPanel">Live Board</button>
+          <button class="tab-btn" data-tab="recsPanel">3 Best Leans</button>
+        </div>
+        <div class="board-head">
+          <div>
+            <p class="board-title">Today’s slate</p>
+            <p class="board-sub" id="boardSub">Live and upcoming NBA lines from the embedded odds feed.</p>
+          </div>
+          <div class="status" id="statusLabel">DraftKings feed</div>
+        </div>
+        <div class="panel active" id="boardPanel">
+          <iframe
+            id="oddsFrame"
+            title="NBA live odds and spreads"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        <div class="panel" id="recsPanel">
+          <div class="recs" id="recsGrid"></div>
+          <p class="rec-note" id="recNote">
+            Loading the latest daily recommendations.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const ACCESS_KEY = "wk_609139e0711796ddc1b914808cd87a6d";
+      const BOOKMAKER = "draftkings";
+      const boardSub = document.getElementById("boardSub");
+      const todayLabel = document.getElementById("todayLabel");
+      const statusLabel = document.getElementById("statusLabel");
+      const liveStatus = document.getElementById("liveStatus");
+      const frameEl = document.getElementById("oddsFrame");
+      const recsGrid = document.getElementById("recsGrid");
+      const recNote = document.getElementById("recNote");
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const panels = document.querySelectorAll(".panel");
+      let latestGeneratedLabel = "Awaiting refresh";
+
+      todayLabel.textContent = new Intl.DateTimeFormat("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+      }).format(new Date());
+
+      function buildWidgetUrl() {
+        const params = new URLSearchParams({
+          accessKey: ACCESS_KEY,
+          bookmakerKeys: BOOKMAKER,
+          oddsFormat: "american",
+          markets: "h2h,spreads",
+          marketNames: "h2h:Moneyline,spreads:Spread",
+        });
+
+        return `https://widget.the-odds-api.com/v1/sports/basketball_nba/events/?${params.toString()}`;
+      }
+
+      frameEl.src = buildWidgetUrl();
+      statusLabel.textContent = "DraftKings live feed";
+
+      frameEl.addEventListener("load", () => {
+        liveStatus.textContent = "Feed active";
+      });
+
+      function renderRecommendations(payload) {
+        const items = payload.recommendations || [];
+        if (!items.length) {
+          recsGrid.innerHTML = "";
+          recNote.textContent = "No recommendations available yet.";
+          return;
+        }
+
+        recsGrid.innerHTML = items
+          .map(
+            (item, index) => `
+              <article class="rec-card">
+                <div class="rec-rank">${index + 1}</div>
+                <h3 class="rec-title">${item.title}</h3>
+                <div class="rec-line">${item.matchup}: ${item.line}</div>
+                <p class="rec-copy">${item.reason}</p>
+              </article>
+            `
+          )
+          .join("");
+
+        latestGeneratedLabel = payload.generated_label;
+        recNote.textContent =
+          `Updated ${payload.generated_label}. Source: ${payload.bookmaker_title} via The Odds API. These are model leans, not guarantees.`;
+      }
+
+      fetch("./daily-data.json", { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Unable to load daily data");
+          }
+          return response.json();
+        })
+        .then(renderRecommendations)
+        .catch(() => {
+          recsGrid.innerHTML = "";
+          recNote.textContent = "Daily recommendations are temporarily unavailable.";
+        });
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const tabId = button.dataset.tab;
+          tabButtons.forEach((item) => item.classList.toggle("active", item === button));
+          panels.forEach((panel) => panel.classList.toggle("active", panel.id === tabId));
+          boardSub.textContent =
+            tabId === "boardPanel"
+              ? "Live and upcoming NBA lines from the embedded odds feed."
+              : "Three concise market leans built from today’s consensus lines.";
+          statusLabel.textContent =
+            tabId === "boardPanel" ? "DraftKings live feed" : latestGeneratedLabel;
+        });
+      });
+    </script>
+  </body>
+</html>
