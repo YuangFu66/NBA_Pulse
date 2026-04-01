@@ -2,7 +2,7 @@ name: Refresh NBA data
 
 on:
   schedule:
-    - cron: "5 14 * * *"
+    - cron: "8 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,12 +21,24 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Gate refresh to start of Los Angeles day
+        id: gate
+        run: |
+          if [ "$(TZ=America/Los_Angeles date +%H)" != "00" ]; then
+            echo "run_refresh=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "run_refresh=true" >> "$GITHUB_OUTPUT"
+
       - name: Refresh published data
+        if: steps.gate.outputs.run_refresh == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/refresh_nba_data.py
 
       - name: Commit refreshed data
+        if: steps.gate.outputs.run_refresh == 'true'
         run: |
           if git diff --quiet -- docs/daily-data.json; then
             echo "No data changes to commit."
