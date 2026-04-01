@@ -8,7 +8,7 @@ from urllib.request import urlopen
 
 API_HOST = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds/"
 REPO_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = REPO_ROOT / "site" / "daily-data.json"
+OUTPUT_PATH = REPO_ROOT / "docs" / "daily-data.json"
 
 
 def american_to_probability(price: int) -> float:
@@ -42,6 +42,14 @@ def pick_outcomes(event: dict) -> dict:
     return {"bookmaker": bookmaker, "h2h": h2h, "spreads": spreads}
 
 
+def format_record(event: dict) -> dict:
+    return {
+        "home_team": event["home_team"],
+        "away_team": event["away_team"],
+        "commence_time": event.get("commence_time"),
+    }
+
+
 def build_candidates(event: dict) -> list:
     parsed = pick_outcomes(event)
     teams = [event["home_team"], event["away_team"]]
@@ -65,7 +73,8 @@ def build_candidates(event: dict) -> list:
                 "matchup": matchup,
                 "reason": (
                     f"Recommendation: buy {favorite} on the moneyline. They sit in the strongest short-favorite zone on the board, "
-                    f"which usually offers the best mix of market support and manageable price without needing a larger margin."
+                    f"which usually offers one of the better balances between win probability and price discipline. "
+                    f"The market is backing them without pushing the number into a range where the cost becomes harder to justify."
                 ),
             }
         )
@@ -80,7 +89,8 @@ def build_candidates(event: dict) -> list:
                 "matchup": matchup,
                 "reason": (
                     f"Recommendation: buy {favorite} {favorite_spread['point']:+g}. The spread is still inside a controlled range and the moneyline agrees, "
-                    f"which is usually where favorite-side value is most stable."
+                    f"which is usually where favorite-side value is most stable. "
+                    f"It gives this team a realistic path to covering without asking them to win by an inflated margin."
                 ),
             }
         )
@@ -95,7 +105,24 @@ def build_candidates(event: dict) -> list:
                 "matchup": matchup,
                 "reason": (
                     f"Recommendation: buy {underdog} +{underdog_spread['point']:g}. The number gives a large scoring cushion at near-standard juice, "
-                    f"which can be attractive in NBA games where late swings make big favorites harder to trust."
+                    f"which can be attractive in NBA games where late swings make big favorites harder to trust. "
+                    f"That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+                ),
+            }
+        )
+
+    if not candidates:
+        fallback_score = 76 - abs(abs(favorite_ml) - 170) * 0.12
+        candidates.append(
+            {
+                "score": fallback_score,
+                "title": f"Buy {favorite} to win",
+                "line": f"{favorite_ml:+d}",
+                "matchup": matchup,
+                "reason": (
+                    f"Recommendation: buy {favorite} on the moneyline. This is the strongest baseline side available in a matchup "
+                    f"that does not land inside the tighter model windows for spreads or short favorites. "
+                    f"The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
                 ),
             }
         )
@@ -106,7 +133,9 @@ def build_candidates(event: dict) -> list:
 def build_payload(events: list) -> dict:
     now = datetime.now(timezone.utc)
     candidates = []
+    analyzed_games = []
     for event in events:
+        analyzed_games.append(format_record(event))
         candidates.extend(build_candidates(event))
 
     top = []
@@ -123,6 +152,7 @@ def build_payload(events: list) -> dict:
         "generated_at": now.isoformat(),
         "generated_label": now.astimezone().strftime("%b %-d, %Y %I:%M %p %Z"),
         "bookmaker_title": "DraftKings",
+        "games_analyzed": analyzed_games,
         "recommendations": top,
     }
 

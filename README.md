@@ -8,14 +8,17 @@ NBA Pulse is a public NBA odds website that shows:
 ## Live Site
 
 Public site:
-[https://raw.githack.com/YuangFu66/Project_test/664419ac67c360a41958311f8db9656d3404c1d9/site/index.html](https://raw.githack.com/YuangFu66/Project_test/664419ac67c360a41958311f8db9656d3404c1d9/site/index.html)
+[https://yuangfu66.github.io/NBA_Pulse/](https://yuangfu66.github.io/NBA_Pulse/)
+
+GitHub Pages should be configured to deploy from the `main` branch using the `/docs` folder.
+
+The embedded odds board loads live data from The Odds API widget whenever someone opens the page. The daily recommendations can now be refreshed automatically by GitHub Actions once `ODDS_API_KEY` is added as a repository secret.
 
 ## Project Structure
 
-- `site/index.html` - public website UI
-- `site/daily-data.json` - generated recommendation data consumed by the site
+- `docs/index.html` - public website UI served by GitHub Pages
+- `docs/daily-data.json` - generated recommendation data consumed by the site
 - `scripts/refresh_nba_data.py` - fetches live NBA odds and generates the daily recommendations
-- `.github/workflows/refresh-nba-data.yml` - scheduled workflow that refreshes the data automatically
 
 ## How It Works
 
@@ -27,7 +30,7 @@ The site uses two data paths:
 
 2. Daily recommendations
 - Generated from The Odds API JSON endpoint
-- Written into `site/daily-data.json`
+- Written into `docs/daily-data.json`
 - Loaded by the website each time the page opens
 
 
@@ -35,4 +38,4 @@ The site uses two data paths:
 
 - Recommendations are data-driven picks based on current odds and basic model rules.
 - They are not guarantees or financial advice.
-
+- The scheduled workflow runs daily at 14:05 UTC, which is 7:05 AM PST or 8:05 AM PDT.
