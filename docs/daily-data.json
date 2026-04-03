@@ -1,60 +1,75 @@
 {
-  "generated_at": "2026-04-02T07:39:26.339903+00:00",
-  "generated_label": "Apr 2, 2026 07:39 AM UTC",
+  "generated_at": "2026-04-03T07:24:23.090306+00:00",
+  "generated_label": "Apr 3, 2026 07:24 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
       "home_team": "Charlotte Hornets",
-      "away_team": "Phoenix Suns",
-      "commence_time": "2026-04-02T23:10:00Z"
+      "away_team": "Indiana Pacers",
+      "commence_time": "2026-04-03T23:10:00Z"
     },
     {
-      "home_team": "Detroit Pistons",
+      "home_team": "Philadelphia 76ers",
       "away_team": "Minnesota Timberwolves",
-      "commence_time": "2026-04-02T23:10:00Z"
+      "commence_time": "2026-04-03T23:10:00Z"
     },
     {
-      "home_team": "Oklahoma City Thunder",
-      "away_team": "Los Angeles Lakers",
-      "commence_time": "2026-04-03T01:40:00Z"
+      "home_team": "Brooklyn Nets",
+      "away_team": "Atlanta Hawks",
+      "commence_time": "2026-04-03T23:40:00Z"
     },
     {
-      "home_team": "Golden State Warriors",
-      "away_team": "Cleveland Cavaliers",
-      "commence_time": "2026-04-03T02:10:00Z"
+      "home_team": "New York Knicks",
+      "away_team": "Chicago Bulls",
+      "commence_time": "2026-04-03T23:40:00Z"
     },
     {
-      "home_team": "Portland Trail Blazers",
+      "home_team": "Milwaukee Bucks",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-04-04T00:10:00Z"
+    },
+    {
+      "home_team": "Houston Rockets",
+      "away_team": "Utah Jazz",
+      "commence_time": "2026-04-04T00:10:00Z"
+    },
+    {
+      "home_team": "Memphis Grizzlies",
+      "away_team": "Toronto Raptors",
+      "commence_time": "2026-04-04T00:10:00Z"
+    },
+    {
+      "home_team": "Dallas Mavericks",
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-04T00:40:00Z"
+    },
+    {
+      "home_team": "Sacramento Kings",
       "away_team": "New Orleans Pelicans",
-      "commence_time": "2026-04-03T02:10:00Z"
-    },
-    {
-      "home_team": "Los Angeles Clippers",
-      "away_team": "San Antonio Spurs",
-      "commence_time": "2026-04-03T02:40:00Z"
+      "commence_time": "2026-04-04T02:10:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 92.0,
-      "title": "Buy Detroit Pistons -3.5",
-      "line": "Spread -3.5 at -105",
-      "matchup": "Minnesota Timberwolves at Detroit Pistons",
-      "reason": "Recommendation: buy Detroit Pistons -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
-    },
-    {
-      "score": 89.0,
-      "title": "Buy San Antonio Spurs -3.5",
-      "line": "Spread -3.5 at -118",
-      "matchup": "San Antonio Spurs at Los Angeles Clippers",
-      "reason": "Recommendation: buy San Antonio Spurs -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "score": 100.0,
+      "title": "Buy Philadelphia 76ers to win",
+      "line": "-135",
+      "matchup": "Minnesota Timberwolves at Philadelphia 76ers",
+      "reason": "Recommendation: buy Philadelphia 76ers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
     },
     {
       "score": 78.0,
-      "title": "Buy Charlotte Hornets -5.5",
+      "title": "Buy New Orleans Pelicans -5.5",
       "line": "Spread -5.5 at -108",
-      "matchup": "Phoenix Suns at Charlotte Hornets",
-      "reason": "Recommendation: buy Charlotte Hornets -5.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "matchup": "New Orleans Pelicans at Sacramento Kings",
+      "reason": "Recommendation: buy New Orleans Pelicans -5.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+    },
+    {
+      "score": 71.0,
+      "title": "Buy Orlando Magic -6.5",
+      "line": "Spread -6.5 at -112",
+      "matchup": "Orlando Magic at Dallas Mavericks",
+      "reason": "Recommendation: buy Orlando Magic -6.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     }
   ]
 }
