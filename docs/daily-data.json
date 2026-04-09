@@ -1,65 +1,60 @@
 {
-  "generated_at": "2026-04-08T07:50:56.266282+00:00",
-  "generated_label": "Apr 8, 2026 07:50 AM UTC",
+  "generated_at": "2026-04-09T07:53:02.355301+00:00",
+  "generated_label": "Apr 9, 2026 07:53 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Cleveland Cavaliers",
-      "away_team": "Atlanta Hawks",
-      "commence_time": "2026-04-08T23:10:00Z"
+      "home_team": "Washington Wizards",
+      "away_team": "Chicago Bulls",
+      "commence_time": "2026-04-09T23:10:00Z"
     },
     {
-      "home_team": "Detroit Pistons",
-      "away_team": "Milwaukee Bucks",
-      "commence_time": "2026-04-08T23:10:00Z"
+      "home_team": "Toronto Raptors",
+      "away_team": "Miami Heat",
+      "commence_time": "2026-04-09T23:10:00Z"
     },
     {
-      "home_team": "Orlando Magic",
-      "away_team": "Minnesota Timberwolves",
-      "commence_time": "2026-04-08T23:10:00Z"
+      "home_team": "New York Knicks",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-04-09T23:40:00Z"
     },
     {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Portland Trail Blazers",
-      "commence_time": "2026-04-09T00:10:00Z"
+      "home_team": "Brooklyn Nets",
+      "away_team": "Indiana Pacers",
+      "commence_time": "2026-04-09T23:40:00Z"
     },
     {
-      "home_team": "Denver Nuggets",
-      "away_team": "Memphis Grizzlies",
-      "commence_time": "2026-04-09T01:10:00Z"
+      "home_team": "Houston Rockets",
+      "away_team": "Philadelphia 76ers",
+      "commence_time": "2026-04-10T00:10:00Z"
     },
     {
-      "home_team": "Phoenix Suns",
-      "away_team": "Dallas Mavericks",
-      "commence_time": "2026-04-09T02:10:00Z"
-    },
-    {
-      "home_team": "Los Angeles Clippers",
-      "away_team": "Oklahoma City Thunder",
-      "commence_time": "2026-04-09T02:10:00Z"
+      "home_team": "Golden State Warriors",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-04-10T02:10:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 94.75,
-      "title": "Buy Cleveland Cavaliers to win",
-      "line": "-120",
-      "matchup": "Atlanta Hawks at Cleveland Cavaliers",
-      "reason": "Recommendation: buy Cleveland Cavaliers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 92.0,
+      "title": "Buy New York Knicks -3.5",
+      "line": "Spread -3.5 at -115",
+      "matchup": "Boston Celtics at New York Knicks",
+      "reason": "Recommendation: buy New York Knicks -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
       "score": 92.0,
-      "title": "Buy San Antonio Spurs -3.5",
-      "line": "Spread -3.5 at -110",
-      "matchup": "Portland Trail Blazers at San Antonio Spurs",
-      "reason": "Recommendation: buy San Antonio Spurs -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "title": "Buy Indiana Pacers -3.5",
+      "line": "Spread -3.5 at -108",
+      "matchup": "Indiana Pacers at Brooklyn Nets",
+      "reason": "Recommendation: buy Indiana Pacers -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
-      "score": 74.0,
-      "title": "Buy Dallas Mavericks +10.5",
-      "line": "Spread +10.5 at -118",
-      "matchup": "Dallas Mavericks at Phoenix Suns",
-      "reason": "Recommendation: buy Dallas Mavericks +10.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 92.0,
+      "title": "Buy Houston Rockets -3.5",
+      "line": "Spread -3.5 at -115",
+      "matchup": "Philadelphia 76ers at Houston Rockets",
+      "reason": "Recommendation: buy Houston Rockets -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     }
   ]
 }
