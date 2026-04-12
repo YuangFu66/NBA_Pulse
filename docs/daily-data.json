@@ -1,105 +1,105 @@
 {
-  "generated_at": "2026-04-10T07:57:48.833025+00:00",
-  "generated_label": "Apr 10, 2026 07:57 AM UTC",
+  "generated_at": "2026-04-12T07:42:02.748372+00:00",
+  "generated_label": "Apr 12, 2026 07:42 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Atlanta Hawks",
-      "away_team": "Cleveland Cavaliers",
-      "commence_time": "2026-04-10T23:10:00Z"
-    },
-    {
-      "home_team": "Charlotte Hornets",
-      "away_team": "Detroit Pistons",
-      "commence_time": "2026-04-10T23:10:00Z"
-    },
-    {
-      "home_team": "Washington Wizards",
-      "away_team": "Miami Heat",
-      "commence_time": "2026-04-10T23:10:00Z"
+      "home_team": "Miami Heat",
+      "away_team": "Atlanta Hawks",
+      "commence_time": "2026-04-12T22:10:00Z"
     },
     {
       "home_team": "Boston Celtics",
-      "away_team": "New Orleans Pelicans",
-      "commence_time": "2026-04-10T23:40:00Z"
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-12T22:10:00Z"
     },
     {
-      "home_team": "Indiana Pacers",
-      "away_team": "Philadelphia 76ers",
-      "commence_time": "2026-04-10T23:40:00Z"
+      "home_team": "Toronto Raptors",
+      "away_team": "Brooklyn Nets",
+      "commence_time": "2026-04-12T22:10:00Z"
     },
     {
       "home_team": "New York Knicks",
-      "away_team": "Toronto Raptors",
-      "commence_time": "2026-04-10T23:40:00Z"
+      "away_team": "Charlotte Hornets",
+      "commence_time": "2026-04-12T22:10:00Z"
     },
     {
-      "home_team": "Milwaukee Bucks",
-      "away_team": "Brooklyn Nets",
-      "commence_time": "2026-04-11T00:10:00Z"
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Washington Wizards",
+      "commence_time": "2026-04-12T22:10:00Z"
     },
     {
-      "home_team": "Chicago Bulls",
-      "away_team": "Orlando Magic",
-      "commence_time": "2026-04-11T00:10:00Z"
+      "home_team": "Indiana Pacers",
+      "away_team": "Detroit Pistons",
+      "commence_time": "2026-04-12T22:10:00Z"
+    },
+    {
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Milwaukee Bucks",
+      "commence_time": "2026-04-12T22:10:00Z"
+    },
+    {
+      "home_team": "Dallas Mavericks",
+      "away_team": "Chicago Bulls",
+      "commence_time": "2026-04-13T00:40:00Z"
     },
     {
       "home_team": "San Antonio Spurs",
-      "away_team": "Dallas Mavericks",
-      "commence_time": "2026-04-11T00:10:00Z"
+      "away_team": "Denver Nuggets",
+      "commence_time": "2026-04-13T00:40:00Z"
     },
     {
-      "home_team": "Denver Nuggets",
-      "away_team": "Oklahoma City Thunder",
-      "commence_time": "2026-04-11T01:10:00Z"
+      "home_team": "Los Angeles Clippers",
+      "away_team": "Golden State Warriors",
+      "commence_time": "2026-04-13T00:40:00Z"
     },
     {
       "home_team": "Houston Rockets",
-      "away_team": "Minnesota Timberwolves",
-      "commence_time": "2026-04-11T01:40:00Z"
-    },
-    {
-      "home_team": "Utah Jazz",
       "away_team": "Memphis Grizzlies",
-      "commence_time": "2026-04-11T01:40:00Z"
-    },
-    {
-      "home_team": "Sacramento Kings",
-      "away_team": "Golden State Warriors",
-      "commence_time": "2026-04-11T02:10:00Z"
-    },
-    {
-      "home_team": "Portland Trail Blazers",
-      "away_team": "Los Angeles Clippers",
-      "commence_time": "2026-04-11T02:10:00Z"
+      "commence_time": "2026-04-13T00:40:00Z"
     },
     {
       "home_team": "Los Angeles Lakers",
+      "away_team": "Utah Jazz",
+      "commence_time": "2026-04-13T00:40:00Z"
+    },
+    {
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "New Orleans Pelicans",
+      "commence_time": "2026-04-13T00:40:00Z"
+    },
+    {
+      "home_team": "Oklahoma City Thunder",
       "away_team": "Phoenix Suns",
-      "commence_time": "2026-04-11T02:40:00Z"
+      "commence_time": "2026-04-13T00:40:00Z"
+    },
+    {
+      "home_team": "Portland Trail Blazers",
+      "away_team": "Sacramento Kings",
+      "commence_time": "2026-04-13T00:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 98.25,
-      "title": "Buy Phoenix Suns to win",
-      "line": "-130",
-      "matchup": "Phoenix Suns at Los Angeles Lakers",
-      "reason": "Recommendation: buy Phoenix Suns on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 85.0,
+      "title": "Buy Miami Heat -4.5",
+      "line": "Spread -4.5 at -105",
+      "matchup": "Atlanta Hawks at Miami Heat",
+      "reason": "Recommendation: buy Miami Heat -4.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
-      "score": 96.5,
-      "title": "Buy Portland Trail Blazers to win",
-      "line": "-125",
-      "matchup": "Los Angeles Clippers at Portland Trail Blazers",
-      "reason": "Recommendation: buy Portland Trail Blazers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 81.0,
+      "title": "Buy Denver Nuggets +11.5",
+      "line": "Spread +11.5 at -115",
+      "matchup": "Denver Nuggets at San Antonio Spurs",
+      "reason": "Recommendation: buy Denver Nuggets +11.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
     },
     {
-      "score": 90.55,
-      "title": "Buy Charlotte Hornets to win",
-      "line": "-162",
-      "matchup": "Detroit Pistons at Charlotte Hornets",
-      "reason": "Recommendation: buy Charlotte Hornets on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 80.0,
+      "title": "Buy Boston Celtics +12.5",
+      "line": "Spread +12.5 at -112",
+      "matchup": "Orlando Magic at Boston Celtics",
+      "reason": "Recommendation: buy Boston Celtics +12.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
     }
   ]
 }
