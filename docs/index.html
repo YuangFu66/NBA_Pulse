@@ -232,7 +232,7 @@
 
       .recs {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 16px;
       }
 
@@ -600,7 +600,7 @@
 
           const subtexts = {
             boardPanel: "Live and upcoming NBA lines from the embedded odds feed.",
-            recsPanel: "Three direct daily picks built from today's odds and model analysis.",
+            recsPanel: "Today's best picks built from live odds and model analysis.",
             accuracyPanel: "Historical accuracy of all daily recommendations.",
           };
           boardSub.textContent = subtexts[tabId] || "";

@@ -1,10 +1,11 @@
 import json
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
+from zoneinfo import ZoneInfo
 
 
 API_HOST = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds/"
@@ -132,11 +133,26 @@ def build_candidates(event: dict) -> list:
     return candidates
 
 
+def is_today_la(commence_time: str) -> bool:
+    """Return True if the game starts today in Los Angeles time."""
+    la = ZoneInfo("America/Los_Angeles")
+    today = datetime.now(la).date()
+    try:
+        game_dt = datetime.fromisoformat(commence_time.replace("Z", "+00:00"))
+        return game_dt.astimezone(la).date() == today
+    except (ValueError, AttributeError):
+        return False
+
+
 def build_payload(events: list) -> dict:
     now = datetime.now(timezone.utc)
+
+    # Only consider games happening today (LA time)
+    todays_events = [e for e in events if is_today_la(e.get("commence_time", ""))]
+
     candidates = []
     analyzed_games = []
-    for event in events:
+    for event in todays_events:
         analyzed_games.append(format_record(event))
         candidates.extend(build_candidates(event))
 
