@@ -494,6 +494,51 @@
       "result": "pending",
       "home_score": null,
       "away_score": null
+    },
+    {
+      "generated_at": "2026-04-14T22:16:04.589909+00:00",
+      "team": "Philadelphia 76ers",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Philadelphia 76ers to win",
+      "line": "-118",
+      "matchup": "Orlando Magic at Philadelphia 76ers",
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-15T23:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-14T22:16:04.589909+00:00",
+      "team": "Phoenix Suns",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Phoenix Suns to win",
+      "line": "-162",
+      "matchup": "Portland Trail Blazers at Phoenix Suns",
+      "home_team": "Phoenix Suns",
+      "away_team": "Portland Trail Blazers",
+      "commence_time": "2026-04-15T02:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-14T22:16:04.589909+00:00",
+      "team": "New York Knicks",
+      "type": "spread",
+      "spread_point": -4.5,
+      "title": "Buy New York Knicks -4.5",
+      "line": "Spread -4.5 at -115",
+      "matchup": "Atlanta Hawks at New York Knicks",
+      "home_team": "New York Knicks",
+      "away_team": "Atlanta Hawks",
+      "commence_time": "2026-04-18T22:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }
