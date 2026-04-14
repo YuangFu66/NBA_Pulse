@@ -283,6 +283,102 @@
         line-height: 1.5;
       }
 
+      .accuracy-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px 32px;
+        text-align: center;
+      }
+
+      .accuracy-ring {
+        position: relative;
+        width: 180px;
+        height: 180px;
+      }
+
+      .accuracy-ring svg {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg);
+      }
+
+      .accuracy-ring .ring-bg {
+        fill: none;
+        stroke: rgba(111, 232, 255, 0.1);
+        stroke-width: 10;
+      }
+
+      .accuracy-ring .ring-fg {
+        fill: none;
+        stroke: url(#accGrad);
+        stroke-width: 10;
+        stroke-linecap: round;
+        transition: stroke-dashoffset 1s ease;
+      }
+
+      .accuracy-pct {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--cyan);
+        text-shadow: 0 0 24px rgba(111, 232, 255, 0.4);
+      }
+
+      .accuracy-record {
+        margin-top: 18px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+      }
+
+      .accuracy-sublabel {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .accuracy-stats {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        margin-top: 28px;
+      }
+
+      .accuracy-stat {
+        text-align: center;
+      }
+
+      .accuracy-stat-val {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .accuracy-stat-val.wins { color: var(--lime); }
+      .accuracy-stat-val.losses { color: var(--pink); }
+      .accuracy-stat-val.pending-val { color: var(--muted); }
+
+      .accuracy-stat-lbl {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .accuracy-note {
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
       @media (max-width: 980px) {
         .hero {
           grid-template-columns: 1fr;
@@ -330,6 +426,7 @@
         <div class="tabs">
           <button class="tab-btn active" data-tab="boardPanel">Live Board</button>
           <button class="tab-btn" data-tab="recsPanel">3 Best Picks</button>
+          <button class="tab-btn" data-tab="accuracyPanel">Accuracy</button>
         </div>
         <div class="board-head">
           <div>
@@ -351,6 +448,11 @@
           <p class="rec-note" id="recNote">
             Loading the latest daily recommendations.
           </p>
+        </div>
+        <div class="panel" id="accuracyPanel">
+          <div class="accuracy-hero" id="accuracyContent">
+            <p class="accuracy-sublabel">Loading accuracy data…</p>
+          </div>
         </div>
       </section>
     </main>
@@ -433,17 +535,82 @@
           recNote.textContent = "Daily recommendations are temporarily unavailable.";
         });
 
+      const accuracyContent = document.getElementById("accuracyContent");
+      let accuracyLabel = "Accuracy tracker";
+
+      function renderAccuracy(data) {
+        const pct = data.accuracy_pct || 0;
+        const circumference = 2 * Math.PI * 72;
+        const offset = circumference - (pct / 100) * circumference;
+
+        accuracyContent.innerHTML = `
+          <div class="accuracy-ring">
+            <svg viewBox="0 0 180 180">
+              <defs>
+                <linearGradient id="accGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--cyan)" />
+                  <stop offset="100%" stop-color="var(--lime)" />
+                </linearGradient>
+              </defs>
+              <circle class="ring-bg" cx="90" cy="90" r="72" />
+              <circle class="ring-fg" cx="90" cy="90" r="72"
+                stroke-dasharray="${circumference}"
+                stroke-dashoffset="${offset}" />
+            </svg>
+            <div class="accuracy-pct">${pct}%</div>
+          </div>
+          <div class="accuracy-record">${data.record_label || "0-0"}</div>
+          <div class="accuracy-sublabel">Overall Pick Record</div>
+          <div class="accuracy-stats">
+            <div class="accuracy-stat">
+              <div class="accuracy-stat-val wins">${data.wins || 0}</div>
+              <div class="accuracy-stat-lbl">Wins</div>
+            </div>
+            <div class="accuracy-stat">
+              <div class="accuracy-stat-val losses">${data.losses || 0}</div>
+              <div class="accuracy-stat-lbl">Losses</div>
+            </div>
+            <div class="accuracy-stat">
+              <div class="accuracy-stat-val pending-val">${data.pending || 0}</div>
+              <div class="accuracy-stat-lbl">Pending</div>
+            </div>
+          </div>
+          <p class="accuracy-note">
+            Tracking ${data.total_picks || 0} total picks. Results checked automatically
+            against final scores each day.
+          </p>
+        `;
+
+        accuracyLabel = `${pct}% (${data.record_label || "0-0"})`;
+      }
+
+      fetch("./accuracy-data.json", { cache: "no-store" })
+        .then((r) => r.ok ? r.json() : Promise.reject())
+        .then(renderAccuracy)
+        .catch(() => {
+          accuracyContent.innerHTML =
+            ‘<p class="accuracy-sublabel">Accuracy data not yet available. Check back after games are played.</p>’;
+        });
+
       tabButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const tabId = button.dataset.tab;
           tabButtons.forEach((item) => item.classList.toggle("active", item === button));
           panels.forEach((panel) => panel.classList.toggle("active", panel.id === tabId));
-          boardSub.textContent =
-            tabId === "boardPanel"
-              ? "Live and upcoming NBA lines from the embedded odds feed."
-              : "Three direct daily picks built from today’s odds and model analysis.";
-          statusLabel.textContent =
-            tabId === "boardPanel" ? "DraftKings live feed" : latestGeneratedLabel;
+
+          const subtexts = {
+            boardPanel: "Live and upcoming NBA lines from the embedded odds feed.",
+            recsPanel: "Three direct daily picks built from today’s odds and model analysis.",
+            accuracyPanel: "Historical accuracy of all daily recommendations.",
+          };
+          boardSub.textContent = subtexts[tabId] || "";
+
+          const labels = {
+            boardPanel: "DraftKings live feed",
+            recsPanel: latestGeneratedLabel,
+            accuracyPanel: accuracyLabel,
+          };
+          statusLabel.textContent = labels[tabId] || "";
         });
       });
     </script>
