@@ -431,9 +431,9 @@
       "home_team": "Phoenix Suns",
       "away_team": "Portland Trail Blazers",
       "commence_time": "2026-04-15T02:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 110,
+      "away_score": 114
     },
     {
       "generated_at": "2026-04-14T21:37:05.860660+00:00",
@@ -476,9 +476,9 @@
       "home_team": "Phoenix Suns",
       "away_team": "Portland Trail Blazers",
       "commence_time": "2026-04-15T02:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 110,
+      "away_score": 114
     },
     {
       "generated_at": "2026-04-14T21:47:28.314764+00:00",
@@ -521,9 +521,9 @@
       "home_team": "Phoenix Suns",
       "away_team": "Portland Trail Blazers",
       "commence_time": "2026-04-15T02:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 110,
+      "away_score": 114
     },
     {
       "generated_at": "2026-04-14T22:16:04.589909+00:00",
@@ -539,6 +539,36 @@
       "result": "pending",
       "home_score": null,
       "away_score": null
+    },
+    {
+      "generated_at": "2026-04-15T09:13:07.032207+00:00",
+      "team": "Philadelphia 76ers",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Philadelphia 76ers to win",
+      "line": "-130",
+      "matchup": "Orlando Magic at Philadelphia 76ers",
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-15T23:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-15T09:13:07.032207+00:00",
+      "team": "Los Angeles Clippers",
+      "type": "spread",
+      "spread_point": -5.5,
+      "title": "Buy Los Angeles Clippers -5.5",
+      "line": "Spread -5.5 at -105",
+      "matchup": "Golden State Warriors at Los Angeles Clippers",
+      "home_team": "Los Angeles Clippers",
+      "away_team": "Golden State Warriors",
+      "commence_time": "2026-04-16T02:10:00Z",
+      "result": "loss",
+      "home_score": 115,
+      "away_score": 110
     }
   ]
 }
