@@ -416,9 +416,9 @@
       "home_team": "Philadelphia 76ers",
       "away_team": "Orlando Magic",
       "commence_time": "2026-04-15T23:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 109,
+      "away_score": 97
     },
     {
       "generated_at": "2026-04-14T21:37:05.860660+00:00",
@@ -461,9 +461,9 @@
       "home_team": "Philadelphia 76ers",
       "away_team": "Orlando Magic",
       "commence_time": "2026-04-15T23:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 109,
+      "away_score": 97
     },
     {
       "generated_at": "2026-04-14T21:47:28.314764+00:00",
@@ -506,9 +506,9 @@
       "home_team": "Philadelphia 76ers",
       "away_team": "Orlando Magic",
       "commence_time": "2026-04-15T23:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 109,
+      "away_score": 97
     },
     {
       "generated_at": "2026-04-14T22:16:04.589909+00:00",
@@ -551,9 +551,9 @@
       "home_team": "Philadelphia 76ers",
       "away_team": "Orlando Magic",
       "commence_time": "2026-04-15T23:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 109,
+      "away_score": 97
     },
     {
       "generated_at": "2026-04-15T09:13:07.032207+00:00",

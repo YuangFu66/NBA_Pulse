@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-04-15T09:13:07.032207+00:00",
-  "generated_label": "Apr 15, 2026 09:13 AM UTC",
+  "generated_at": "2026-04-16T09:12:33.416203+00:00",
+  "generated_label": "Apr 16, 2026 09:12 AM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [
-    {
-      "home_team": "Philadelphia 76ers",
-      "away_team": "Orlando Magic",
-      "commence_time": "2026-04-15T23:40:00Z"
-    },
-    {
-      "home_team": "Los Angeles Clippers",
-      "away_team": "Golden State Warriors",
-      "commence_time": "2026-04-16T02:10:00Z"
-    }
-  ],
-  "recommendations": [
-    {
-      "score": 98.25,
-      "title": "Buy Philadelphia 76ers to win",
-      "line": "-130",
-      "matchup": "Orlando Magic at Philadelphia 76ers",
-      "reason": "Recommendation: buy Philadelphia 76ers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
-    },
-    {
-      "score": 78.0,
-      "title": "Buy Los Angeles Clippers -5.5",
-      "line": "Spread -5.5 at -105",
-      "matchup": "Golden State Warriors at Los Angeles Clippers",
-      "reason": "Recommendation: buy Los Angeles Clippers -5.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
-    }
-  ]
+  "games_analyzed": [],
+  "recommendations": []
 }
