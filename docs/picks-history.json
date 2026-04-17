@@ -569,6 +569,36 @@
       "result": "loss",
       "home_score": 115,
       "away_score": 110
+    },
+    {
+      "generated_at": "2026-04-17T09:11:09.433860+00:00",
+      "team": "Phoenix Suns",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Phoenix Suns to win",
+      "line": "-155",
+      "matchup": "Golden State Warriors at Phoenix Suns",
+      "home_team": "Phoenix Suns",
+      "away_team": "Golden State Warriors",
+      "commence_time": "2026-04-18T02:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-17T09:11:09.433860+00:00",
+      "team": "Charlotte Hornets",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Charlotte Hornets -3.5",
+      "line": "Spread -3.5 at -110",
+      "matchup": "Charlotte Hornets at Orlando Magic",
+      "home_team": "Orlando Magic",
+      "away_team": "Charlotte Hornets",
+      "commence_time": "2026-04-17T23:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }

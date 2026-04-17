@@ -1,7 +1,33 @@
 {
-  "generated_at": "2026-04-16T09:12:33.416203+00:00",
-  "generated_label": "Apr 16, 2026 09:12 AM UTC",
+  "generated_at": "2026-04-17T09:11:09.433860+00:00",
+  "generated_label": "Apr 17, 2026 09:11 AM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [],
-  "recommendations": []
+  "games_analyzed": [
+    {
+      "home_team": "Orlando Magic",
+      "away_team": "Charlotte Hornets",
+      "commence_time": "2026-04-17T23:40:00Z"
+    },
+    {
+      "home_team": "Phoenix Suns",
+      "away_team": "Golden State Warriors",
+      "commence_time": "2026-04-18T02:10:00Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "score": 93.0,
+      "title": "Buy Phoenix Suns to win",
+      "line": "-155",
+      "matchup": "Golden State Warriors at Phoenix Suns",
+      "reason": "Recommendation: buy Phoenix Suns on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+    },
+    {
+      "score": 92.0,
+      "title": "Buy Charlotte Hornets -3.5",
+      "line": "Spread -3.5 at -110",
+      "matchup": "Charlotte Hornets at Orlando Magic",
+      "reason": "Recommendation: buy Charlotte Hornets -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+    }
+  ]
 }
