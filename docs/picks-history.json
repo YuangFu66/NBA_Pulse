@@ -446,9 +446,9 @@
       "home_team": "New York Knicks",
       "away_team": "Atlanta Hawks",
       "commence_time": "2026-04-18T22:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 113,
+      "away_score": 102
     },
     {
       "generated_at": "2026-04-14T21:47:28.314764+00:00",
@@ -491,9 +491,9 @@
       "home_team": "New York Knicks",
       "away_team": "Atlanta Hawks",
       "commence_time": "2026-04-18T22:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 113,
+      "away_score": 102
     },
     {
       "generated_at": "2026-04-14T22:16:04.589909+00:00",
@@ -536,9 +536,9 @@
       "home_team": "New York Knicks",
       "away_team": "Atlanta Hawks",
       "commence_time": "2026-04-18T22:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 113,
+      "away_score": 102
     },
     {
       "generated_at": "2026-04-15T09:13:07.032207+00:00",
@@ -611,9 +611,9 @@
       "home_team": "New York Knicks",
       "away_team": "Atlanta Hawks",
       "commence_time": "2026-04-18T22:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 113,
+      "away_score": 102
     },
     {
       "generated_at": "2026-04-18T08:41:42.518298+00:00",
@@ -626,9 +626,9 @@
       "home_team": "Los Angeles Lakers",
       "away_team": "Houston Rockets",
       "commence_time": "2026-04-19T00:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 107,
+      "away_score": 98
     },
     {
       "generated_at": "2026-04-18T08:41:42.518298+00:00",
@@ -641,6 +641,51 @@
       "home_team": "Denver Nuggets",
       "away_team": "Minnesota Timberwolves",
       "commence_time": "2026-04-18T19:40:00Z",
+      "result": "win",
+      "home_score": 116,
+      "away_score": 105
+    },
+    {
+      "generated_at": "2026-04-19T08:46:08.397511+00:00",
+      "team": "Philadelphia 76ers",
+      "type": "spread",
+      "spread_point": 12.5,
+      "title": "Buy Philadelphia 76ers +12.5",
+      "line": "Spread +12.5 at -110",
+      "matchup": "Philadelphia 76ers at Boston Celtics",
+      "home_team": "Boston Celtics",
+      "away_team": "Philadelphia 76ers",
+      "commence_time": "2026-04-19T17:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-19T08:46:08.397511+00:00",
+      "team": "Portland Trail Blazers",
+      "type": "spread",
+      "spread_point": 10.5,
+      "title": "Buy Portland Trail Blazers +10.5",
+      "line": "Spread +10.5 at -105",
+      "matchup": "Portland Trail Blazers at San Antonio Spurs",
+      "home_team": "San Antonio Spurs",
+      "away_team": "Portland Trail Blazers",
+      "commence_time": "2026-04-20T01:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-19T08:46:08.397511+00:00",
+      "team": "Phoenix Suns",
+      "type": "spread",
+      "spread_point": 13.5,
+      "title": "Buy Phoenix Suns +13.5",
+      "line": "Spread +13.5 at -102",
+      "matchup": "Phoenix Suns at Oklahoma City Thunder",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Phoenix Suns",
+      "commence_time": "2026-04-19T19:40:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null
