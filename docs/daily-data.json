@@ -1,50 +1,45 @@
 {
-  "generated_at": "2026-04-19T08:46:08.397511+00:00",
-  "generated_label": "Apr 19, 2026 08:46 AM UTC",
+  "generated_at": "2026-04-20T09:53:14.691138+00:00",
+  "generated_label": "Apr 20, 2026 09:53 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Boston Celtics",
-      "away_team": "Philadelphia 76ers",
-      "commence_time": "2026-04-19T17:10:00Z"
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Toronto Raptors",
+      "commence_time": "2026-04-20T23:10:00Z"
     },
     {
-      "home_team": "Oklahoma City Thunder",
-      "away_team": "Phoenix Suns",
-      "commence_time": "2026-04-19T19:40:00Z"
+      "home_team": "New York Knicks",
+      "away_team": "Atlanta Hawks",
+      "commence_time": "2026-04-21T00:10:00Z"
     },
     {
-      "home_team": "Detroit Pistons",
-      "away_team": "Orlando Magic",
-      "commence_time": "2026-04-19T22:40:00Z"
-    },
-    {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Portland Trail Blazers",
-      "commence_time": "2026-04-20T01:10:00Z"
+      "home_team": "Denver Nuggets",
+      "away_team": "Minnesota Timberwolves",
+      "commence_time": "2026-04-21T02:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 80.0,
-      "title": "Buy Philadelphia 76ers +12.5",
-      "line": "Spread +12.5 at -110",
-      "matchup": "Philadelphia 76ers at Boston Celtics",
-      "reason": "Recommendation: buy Philadelphia 76ers +12.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 78.0,
+      "title": "Buy New York Knicks -5.5",
+      "line": "Spread -5.5 at -115",
+      "matchup": "Atlanta Hawks at New York Knicks",
+      "reason": "Recommendation: buy New York Knicks -5.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
-      "score": 80.0,
-      "title": "Buy Portland Trail Blazers +10.5",
-      "line": "Spread +10.5 at -105",
-      "matchup": "Portland Trail Blazers at San Antonio Spurs",
-      "reason": "Recommendation: buy Portland Trail Blazers +10.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 71.0,
+      "title": "Buy Denver Nuggets -6.5",
+      "line": "Spread -6.5 at -115",
+      "matchup": "Minnesota Timberwolves at Denver Nuggets",
+      "reason": "Recommendation: buy Denver Nuggets -6.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
-      "score": 76.0,
-      "title": "Buy Phoenix Suns +13.5",
-      "line": "Spread +13.5 at -102",
-      "matchup": "Phoenix Suns at Oklahoma City Thunder",
-      "reason": "Recommendation: buy Phoenix Suns +13.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 55.0,
+      "title": "Buy Cleveland Cavaliers to win",
+      "line": "-345",
+      "matchup": "Toronto Raptors at Cleveland Cavaliers",
+      "reason": "Recommendation: buy Cleveland Cavaliers on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
     }
   ]
 }
