@@ -734,6 +734,51 @@
       "result": "win",
       "home_score": 126,
       "away_score": 113
+    },
+    {
+      "generated_at": "2026-04-21T09:19:42.865848+00:00",
+      "team": "Houston Rockets",
+      "type": "spread",
+      "spread_point": -4.5,
+      "title": "Buy Houston Rockets -4.5",
+      "line": "Spread -4.5 at -115",
+      "matchup": "Houston Rockets at Los Angeles Lakers",
+      "home_team": "Los Angeles Lakers",
+      "away_team": "Houston Rockets",
+      "commence_time": "2026-04-22T02:40:00Z",
+      "result": "loss",
+      "home_score": 107,
+      "away_score": 98
+    },
+    {
+      "generated_at": "2026-04-21T09:19:42.865848+00:00",
+      "team": "Portland Trail Blazers",
+      "type": "spread",
+      "spread_point": 11.5,
+      "title": "Buy Portland Trail Blazers +11.5",
+      "line": "Spread +11.5 at -115",
+      "matchup": "Portland Trail Blazers at San Antonio Spurs",
+      "home_team": "San Antonio Spurs",
+      "away_team": "Portland Trail Blazers",
+      "commence_time": "2026-04-22T00:00:00Z",
+      "result": "loss",
+      "home_score": 111,
+      "away_score": 98
+    },
+    {
+      "generated_at": "2026-04-21T09:19:42.865848+00:00",
+      "team": "Philadelphia 76ers",
+      "type": "spread",
+      "spread_point": 13.5,
+      "title": "Buy Philadelphia 76ers +13.5",
+      "line": "Spread +13.5 at -110",
+      "matchup": "Philadelphia 76ers at Boston Celtics",
+      "home_team": "Boston Celtics",
+      "away_team": "Philadelphia 76ers",
+      "commence_time": "2026-04-21T23:10:00Z",
+      "result": "loss",
+      "home_score": 123,
+      "away_score": 91
     }
   ]
 }
