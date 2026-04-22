@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-04-21T09:19:43.332258+00:00",
+  "updated_at": "2026-04-22T09:14:14.025135+00:00",
   "wins": 33,
-  "losses": 19,
+  "losses": 21,
   "pushes": 0,
   "pending": 0,
-  "total_picks": 52,
-  "accuracy_pct": 63.5,
-  "record_label": "33-19"
+  "total_picks": 54,
+  "accuracy_pct": 61.1,
+  "record_label": "33-21"
 }

@@ -1,45 +1,33 @@
 {
-  "generated_at": "2026-04-21T09:19:42.865848+00:00",
-  "generated_label": "Apr 21, 2026 09:19 AM UTC",
+  "generated_at": "2026-04-22T09:14:13.450528+00:00",
+  "generated_label": "Apr 22, 2026 09:14 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Boston Celtics",
-      "away_team": "Philadelphia 76ers",
-      "commence_time": "2026-04-21T23:10:00Z"
+      "home_team": "Detroit Pistons",
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-22T23:10:00Z"
     },
     {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Portland Trail Blazers",
-      "commence_time": "2026-04-22T00:00:00Z"
-    },
-    {
-      "home_team": "Los Angeles Lakers",
-      "away_team": "Houston Rockets",
-      "commence_time": "2026-04-22T02:40:00Z"
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Phoenix Suns",
+      "commence_time": "2026-04-23T01:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 85.0,
-      "title": "Buy Houston Rockets -4.5",
-      "line": "Spread -4.5 at -115",
-      "matchup": "Houston Rockets at Los Angeles Lakers",
-      "reason": "Recommendation: buy Houston Rockets -4.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "score": 60.0,
+      "title": "Buy Phoenix Suns +17.5",
+      "line": "Spread +17.5 at -110",
+      "matchup": "Phoenix Suns at Oklahoma City Thunder",
+      "reason": "Recommendation: buy Phoenix Suns +17.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
     },
     {
-      "score": 81.0,
-      "title": "Buy Portland Trail Blazers +11.5",
-      "line": "Spread +11.5 at -115",
-      "matchup": "Portland Trail Blazers at San Antonio Spurs",
-      "reason": "Recommendation: buy Portland Trail Blazers +11.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
-    },
-    {
-      "score": 76.0,
-      "title": "Buy Philadelphia 76ers +13.5",
-      "line": "Spread +13.5 at -110",
-      "matchup": "Philadelphia 76ers at Boston Celtics",
-      "reason": "Recommendation: buy Philadelphia 76ers +13.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 49.0,
+      "title": "Buy Detroit Pistons to win",
+      "line": "-395",
+      "matchup": "Orlando Magic at Detroit Pistons",
+      "reason": "Recommendation: buy Detroit Pistons on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
     }
   ]
 }

@@ -779,6 +779,36 @@
       "result": "loss",
       "home_score": 123,
       "away_score": 91
+    },
+    {
+      "generated_at": "2026-04-22T09:14:13.450528+00:00",
+      "team": "Phoenix Suns",
+      "type": "spread",
+      "spread_point": 17.5,
+      "title": "Buy Phoenix Suns +17.5",
+      "line": "Spread +17.5 at -110",
+      "matchup": "Phoenix Suns at Oklahoma City Thunder",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Phoenix Suns",
+      "commence_time": "2026-04-23T01:40:00Z",
+      "result": "loss",
+      "home_score": 119,
+      "away_score": 84
+    },
+    {
+      "generated_at": "2026-04-22T09:14:13.450528+00:00",
+      "team": "Detroit Pistons",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Detroit Pistons to win",
+      "line": "-395",
+      "matchup": "Orlando Magic at Detroit Pistons",
+      "home_team": "Detroit Pistons",
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-22T23:10:00Z",
+      "result": "loss",
+      "home_score": 101,
+      "away_score": 112
     }
   ]
 }
