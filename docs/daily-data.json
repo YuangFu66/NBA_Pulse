@@ -1,33 +1,45 @@
 {
-  "generated_at": "2026-04-22T09:14:13.450528+00:00",
-  "generated_label": "Apr 22, 2026 09:14 AM UTC",
+  "generated_at": "2026-04-23T09:21:24.592170+00:00",
+  "generated_label": "Apr 23, 2026 09:21 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Detroit Pistons",
-      "away_team": "Orlando Magic",
-      "commence_time": "2026-04-22T23:10:00Z"
+      "home_team": "Atlanta Hawks",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-04-23T23:10:00Z"
     },
     {
-      "home_team": "Oklahoma City Thunder",
-      "away_team": "Phoenix Suns",
-      "commence_time": "2026-04-23T01:40:00Z"
+      "home_team": "Toronto Raptors",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-04-24T00:10:00Z"
+    },
+    {
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "Denver Nuggets",
+      "commence_time": "2026-04-24T01:30:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 60.0,
-      "title": "Buy Phoenix Suns +17.5",
-      "line": "Spread +17.5 at -110",
-      "matchup": "Phoenix Suns at Oklahoma City Thunder",
-      "reason": "Recommendation: buy Phoenix Suns +17.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 100.0,
+      "title": "Buy Denver Nuggets to win",
+      "line": "-135",
+      "matchup": "Denver Nuggets at Minnesota Timberwolves",
+      "reason": "Recommendation: buy Denver Nuggets on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
     },
     {
-      "score": 49.0,
-      "title": "Buy Detroit Pistons to win",
-      "line": "-395",
-      "matchup": "Orlando Magic at Detroit Pistons",
-      "reason": "Recommendation: buy Detroit Pistons on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
+      "score": 93.0,
+      "title": "Buy Cleveland Cavaliers to win",
+      "line": "-155",
+      "matchup": "Cleveland Cavaliers at Toronto Raptors",
+      "reason": "Recommendation: buy Cleveland Cavaliers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+    },
+    {
+      "score": 91.25,
+      "title": "Buy Atlanta Hawks to win",
+      "line": "-110",
+      "matchup": "New York Knicks at Atlanta Hawks",
+      "reason": "Recommendation: buy Atlanta Hawks on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
     }
   ]
 }

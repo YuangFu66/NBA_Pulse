@@ -809,6 +809,51 @@
       "result": "loss",
       "home_score": 101,
       "away_score": 112
+    },
+    {
+      "generated_at": "2026-04-23T09:21:24.592170+00:00",
+      "team": "Denver Nuggets",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Denver Nuggets to win",
+      "line": "-135",
+      "matchup": "Denver Nuggets at Minnesota Timberwolves",
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "Denver Nuggets",
+      "commence_time": "2026-04-24T01:30:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-23T09:21:24.592170+00:00",
+      "team": "Cleveland Cavaliers",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Cleveland Cavaliers to win",
+      "line": "-155",
+      "matchup": "Cleveland Cavaliers at Toronto Raptors",
+      "home_team": "Toronto Raptors",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-04-24T00:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-23T09:21:24.592170+00:00",
+      "team": "Atlanta Hawks",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Atlanta Hawks to win",
+      "line": "-110",
+      "matchup": "New York Knicks at Atlanta Hawks",
+      "home_team": "Atlanta Hawks",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-04-23T23:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }
