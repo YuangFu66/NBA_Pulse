@@ -821,9 +821,9 @@
       "home_team": "Minnesota Timberwolves",
       "away_team": "Denver Nuggets",
       "commence_time": "2026-04-24T01:30:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 113,
+      "away_score": 96
     },
     {
       "generated_at": "2026-04-23T09:21:24.592170+00:00",
@@ -836,9 +836,9 @@
       "home_team": "Toronto Raptors",
       "away_team": "Cleveland Cavaliers",
       "commence_time": "2026-04-24T00:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 126,
+      "away_score": 104
     },
     {
       "generated_at": "2026-04-23T09:21:24.592170+00:00",
@@ -851,6 +851,51 @@
       "home_team": "Atlanta Hawks",
       "away_team": "New York Knicks",
       "commence_time": "2026-04-23T23:10:00Z",
+      "result": "win",
+      "home_score": 109,
+      "away_score": 108
+    },
+    {
+      "generated_at": "2026-04-24T09:26:04.557347+00:00",
+      "team": "San Antonio Spurs",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy San Antonio Spurs to win",
+      "line": "-142",
+      "matchup": "San Antonio Spurs at Portland Trail Blazers",
+      "home_team": "Portland Trail Blazers",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-04-25T02:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-24T09:26:04.557347+00:00",
+      "team": "Boston Celtics",
+      "type": "spread",
+      "spread_point": -6.5,
+      "title": "Buy Boston Celtics -6.5",
+      "line": "Spread -6.5 at -115",
+      "matchup": "Boston Celtics at Philadelphia 76ers",
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-04-24T23:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-24T09:26:04.557347+00:00",
+      "team": "Houston Rockets",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Houston Rockets to win",
+      "line": "-340",
+      "matchup": "Los Angeles Lakers at Houston Rockets",
+      "home_team": "Houston Rockets",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-04-25T00:10:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null

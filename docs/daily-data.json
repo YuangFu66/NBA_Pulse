@@ -1,45 +1,45 @@
 {
-  "generated_at": "2026-04-23T09:21:24.592170+00:00",
-  "generated_label": "Apr 23, 2026 09:21 AM UTC",
+  "generated_at": "2026-04-24T09:26:04.557347+00:00",
+  "generated_label": "Apr 24, 2026 09:26 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Atlanta Hawks",
-      "away_team": "New York Knicks",
-      "commence_time": "2026-04-23T23:10:00Z"
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-04-24T23:10:00Z"
     },
     {
-      "home_team": "Toronto Raptors",
-      "away_team": "Cleveland Cavaliers",
-      "commence_time": "2026-04-24T00:10:00Z"
+      "home_team": "Houston Rockets",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-04-25T00:10:00Z"
     },
     {
-      "home_team": "Minnesota Timberwolves",
-      "away_team": "Denver Nuggets",
-      "commence_time": "2026-04-24T01:30:00Z"
+      "home_team": "Portland Trail Blazers",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-04-25T02:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 100.0,
-      "title": "Buy Denver Nuggets to win",
-      "line": "-135",
-      "matchup": "Denver Nuggets at Minnesota Timberwolves",
-      "reason": "Recommendation: buy Denver Nuggets on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 97.55,
+      "title": "Buy San Antonio Spurs to win",
+      "line": "-142",
+      "matchup": "San Antonio Spurs at Portland Trail Blazers",
+      "reason": "Recommendation: buy San Antonio Spurs on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
     },
     {
-      "score": 93.0,
-      "title": "Buy Cleveland Cavaliers to win",
-      "line": "-155",
-      "matchup": "Cleveland Cavaliers at Toronto Raptors",
-      "reason": "Recommendation: buy Cleveland Cavaliers on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 71.0,
+      "title": "Buy Boston Celtics -6.5",
+      "line": "Spread -6.5 at -115",
+      "matchup": "Boston Celtics at Philadelphia 76ers",
+      "reason": "Recommendation: buy Boston Celtics -6.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
-      "score": 91.25,
-      "title": "Buy Atlanta Hawks to win",
-      "line": "-110",
-      "matchup": "New York Knicks at Atlanta Hawks",
-      "reason": "Recommendation: buy Atlanta Hawks on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
+      "score": 55.6,
+      "title": "Buy Houston Rockets to win",
+      "line": "-340",
+      "matchup": "Los Angeles Lakers at Houston Rockets",
+      "reason": "Recommendation: buy Houston Rockets on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
     }
   ]
 }
