@@ -911,9 +911,9 @@
       "home_team": "Orlando Magic",
       "away_team": "Detroit Pistons",
       "commence_time": "2026-04-25T17:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 113,
+      "away_score": 105
     },
     {
       "generated_at": "2026-04-25T08:44:07.102854+00:00",
@@ -944,6 +944,51 @@
       "result": "loss",
       "home_score": 113,
       "away_score": 96
+    },
+    {
+      "generated_at": "2026-04-26T08:53:53.066727+00:00",
+      "team": "Cleveland Cavaliers",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Cleveland Cavaliers -3.5",
+      "line": "Spread -3.5 at -115",
+      "matchup": "Cleveland Cavaliers at Toronto Raptors",
+      "home_team": "Toronto Raptors",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-04-26T17:10:00Z",
+      "result": "loss",
+      "home_score": 126,
+      "away_score": 104
+    },
+    {
+      "generated_at": "2026-04-26T08:53:53.066727+00:00",
+      "team": "Houston Rockets",
+      "type": "spread",
+      "spread_point": -4.5,
+      "title": "Buy Houston Rockets -4.5",
+      "line": "Spread -4.5 at -115",
+      "matchup": "Los Angeles Lakers at Houston Rockets",
+      "home_team": "Houston Rockets",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-04-27T01:40:00Z",
+      "result": "loss",
+      "home_score": 108,
+      "away_score": 112
+    },
+    {
+      "generated_at": "2026-04-26T08:53:53.066727+00:00",
+      "team": "San Antonio Spurs",
+      "type": "spread",
+      "spread_point": -5.5,
+      "title": "Buy San Antonio Spurs -5.5",
+      "line": "Spread -5.5 at -105",
+      "matchup": "San Antonio Spurs at Portland Trail Blazers",
+      "home_team": "Portland Trail Blazers",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-04-26T19:40:00Z",
+      "result": "win",
+      "home_score": 108,
+      "away_score": 120
     }
   ]
 }
