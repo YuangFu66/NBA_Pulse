@@ -426,7 +426,7 @@
         <div class="tabs">
           <button class="tab-btn active" data-tab="boardPanel">Live Board</button>
           <button class="tab-btn" data-tab="recsPanel">3 Best Picks</button>
-          <button class="tab-btn" data-tab="accuracyPanel">Accuracy</button>
+          <button class="tab-btn" data-tab="returnPanel">Return</button>
         </div>
         <div class="board-head">
           <div>
@@ -449,9 +449,9 @@
             Loading the latest daily recommendations.
           </p>
         </div>
-        <div class="panel" id="accuracyPanel">
-          <div class="accuracy-hero" id="accuracyContent">
-            <p class="accuracy-sublabel">Loading accuracy data…</p>
+        <div class="panel" id="returnPanel">
+          <div class="accuracy-hero" id="returnContent">
+            <p class="accuracy-sublabel">Loading return data...</p>
           </div>
         </div>
       </section>
@@ -535,21 +535,30 @@
           recNote.textContent = "Daily recommendations are temporarily unavailable.";
         });
 
-      const accuracyContent = document.getElementById("accuracyContent");
-      let accuracyLabel = "Accuracy tracker";
+      const returnContent = document.getElementById("returnContent");
+      let returnLabel = "Return tracker";
 
-      function renderAccuracy(data) {
-        const pct = data.accuracy_pct || 0;
+      function renderReturn(data) {
+        const profit = data.total_profit || 0;
+        const retPct = data.return_pct || 0;
+        const isPositive = profit >= 0;
+        const sign = isPositive ? "+" : "";
+        const colorClass = isPositive ? "wins" : "losses";
+
         const circumference = 2 * Math.PI * 72;
-        const offset = circumference - (pct / 100) * circumference;
+        const displayPct = Math.min(Math.abs(retPct), 100);
+        const offset = circumference - (displayPct / 100) * circumference;
+        const gradColors = isPositive
+          ? ['var(--cyan)', 'var(--lime)']
+          : ['var(--pink)', '#ff8888'];
 
-        accuracyContent.innerHTML = `
+        returnContent.innerHTML = `
           <div class="accuracy-ring">
             <svg viewBox="0 0 180 180">
               <defs>
                 <linearGradient id="accGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="var(--cyan)" />
-                  <stop offset="100%" stop-color="var(--lime)" />
+                  <stop offset="0%" stop-color="${gradColors[0]}" />
+                  <stop offset="100%" stop-color="${gradColors[1]}" />
                 </linearGradient>
               </defs>
               <circle class="ring-bg" cx="90" cy="90" r="72" />
@@ -557,10 +566,10 @@
                 stroke-dasharray="${circumference}"
                 stroke-dashoffset="${offset}" />
             </svg>
-            <div class="accuracy-pct">${pct}%</div>
+            <div class="accuracy-pct" style="font-size:2.2rem">${sign}${retPct}%</div>
           </div>
-          <div class="accuracy-record">${data.record_label || "0-0"}</div>
-          <div class="accuracy-sublabel">Overall Pick Record</div>
+          <div class="accuracy-record ${colorClass}">${sign}${profit}u</div>
+          <div class="accuracy-sublabel">Total Return (1u per pick)</div>
           <div class="accuracy-stats">
             <div class="accuracy-stat">
               <div class="accuracy-stat-val wins">${data.wins || 0}</div>
@@ -576,20 +585,20 @@
             </div>
           </div>
           <p class="accuracy-note">
-            Tracking ${data.total_picks || 0} total picks. Results checked automatically
-            against final scores each day.
+            ${data.record_label || "0-0"} record across ${data.total_picks || 0} picks.
+            Returns calculated at 1 unit per pick using line odds.
           </p>
         `;
 
-        accuracyLabel = `${pct}% (${data.record_label || "0-0"})`;
+        returnLabel = sign + retPct + "% (" + (data.record_label || "0-0") + ")";
       }
 
-      fetch("./accuracy-data.json", { cache: "no-store" })
+      fetch("./return-data.json", { cache: "no-store" })
         .then((r) => r.ok ? r.json() : Promise.reject())
-        .then(renderAccuracy)
+        .then(renderReturn)
         .catch(() => {
-          accuracyContent.innerHTML =
-            '<p class="accuracy-sublabel">Accuracy data not yet available. Check back after games are played.</p>';
+          returnContent.innerHTML =
+            '<p class="accuracy-sublabel">Return data not yet available. Check back after games are played.</p>';
         });
 
       tabButtons.forEach((button) => {
@@ -601,14 +610,14 @@
           const subtexts = {
             boardPanel: "Live and upcoming NBA lines from the embedded odds feed.",
             recsPanel: "Today's best picks built from live odds and model analysis.",
-            accuracyPanel: "Historical accuracy of all daily recommendations.",
+            returnPanel: "Unit-based return since launch.",
           };
           boardSub.textContent = subtexts[tabId] || "";
 
           const labels = {
             boardPanel: "DraftKings live feed",
             recsPanel: latestGeneratedLabel,
-            accuracyPanel: accuracyLabel,
+            returnPanel: returnLabel,
           };
           statusLabel.textContent = labels[tabId] || "";
         });

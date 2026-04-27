@@ -2,7 +2,7 @@
 
 Uses The Odds API scores endpoint for recent games (last 3 days) and the
 ESPN scoreboard API for older games.  Writes updated picks-history.json
-and a lightweight accuracy-data.json consumed by the website.
+and a lightweight return-data.json consumed by the website.
 """
 
 import json
@@ -16,7 +16,7 @@ from urllib.request import urlopen
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 HISTORY_PATH = REPO_ROOT / "docs" / "picks-history.json"
-ACCURACY_PATH = REPO_ROOT / "docs" / "accuracy-data.json"
+RETURN_PATH = REPO_ROOT / "docs" / "return-data.json"
 
 ODDS_API_HOST = "https://api.the-odds-api.com/v4/sports/basketball_nba/scores/"
 ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
@@ -131,7 +131,7 @@ def main() -> None:
 
     if not pending:
         print("No pending picks to resolve.")
-        write_accuracy(picks)
+        write_return(picks)
         return
 
     # ----- Collect scores from both sources -----
@@ -208,32 +208,67 @@ def main() -> None:
     # Write updated history
     HISTORY_PATH.write_text(json.dumps(history, indent=2) + "\n", encoding="utf-8")
 
-    # Write accuracy summary
-    write_accuracy(picks)
+    # Write return summary
+    write_return(picks)
 
 
-def write_accuracy(picks: list) -> None:
+def parse_odds(pick: dict) -> int | None:
+    """Extract American odds from a pick's line field."""
+    line = pick.get("line", "")
+    if pick["type"] == "moneyline":
+        m = re.match(r"([+-]?\d+)", line)
+        return int(m.group(1)) if m else None
+    else:
+        m = re.search(r"at\s+([+-]?\d+)", line)
+        return int(m.group(1)) if m else None
+
+
+def calc_profit(odds: int, result: str) -> float:
+    """Return profit in units for a 1-unit wager."""
+    if result == "push":
+        return 0.0
+    if result == "loss":
+        return -1.0
+    if odds < 0:
+        return 100 / abs(odds)
+    else:
+        return odds / 100
+
+
+def write_return(picks: list) -> None:
     resolved = [p for p in picks if p["result"] in ("win", "loss", "push")]
     wins = sum(1 for p in resolved if p["result"] == "win")
     losses = sum(1 for p in resolved if p["result"] == "loss")
     pushes = sum(1 for p in resolved if p["result"] == "push")
     pending_count = sum(1 for p in picks if p["result"] == "pending")
-    total_decided = wins + losses
-    pct = round(wins / total_decided * 100, 1) if total_decided else 0
 
-    accuracy = {
+    total_profit = 0.0
+    units_wagered = 0
+    for p in resolved:
+        odds = parse_odds(p)
+        if odds is None:
+            continue
+        total_profit += calc_profit(odds, p["result"])
+        units_wagered += 1
+
+    return_pct = round(total_profit / units_wagered * 100, 1) if units_wagered else 0
+    total_profit = round(total_profit, 2)
+
+    data = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
+        "total_profit": total_profit,
+        "units_wagered": units_wagered,
+        "return_pct": return_pct,
         "wins": wins,
         "losses": losses,
         "pushes": pushes,
         "pending": pending_count,
         "total_picks": len(picks),
-        "accuracy_pct": pct,
         "record_label": f"{wins}-{losses}" + (f"-{pushes}" if pushes else ""),
     }
 
-    ACCURACY_PATH.write_text(json.dumps(accuracy, indent=2) + "\n", encoding="utf-8")
-    print(f"Accuracy: {pct}% ({accuracy['record_label']})")
+    RETURN_PATH.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    print(f"Return: {'+' if total_profit >= 0 else ''}{total_profit}u ({'+' if return_pct >= 0 else ''}{return_pct}%) | Record: {data['record_label']}")
 
 
 if __name__ == "__main__":
