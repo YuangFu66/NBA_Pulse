@@ -223,16 +223,19 @@ def parse_odds(pick: dict) -> int | None:
         return int(m.group(1)) if m else None
 
 
+WAGER = 100  # dollars per pick
+
+
 def calc_profit(odds: int, result: str) -> float:
-    """Return profit in units for a 1-unit wager."""
+    """Return dollar profit for a $100 wager."""
     if result == "push":
         return 0.0
     if result == "loss":
-        return -1.0
+        return -WAGER
     if odds < 0:
-        return 100 / abs(odds)
+        return WAGER * (100 / abs(odds))
     else:
-        return odds / 100
+        return WAGER * (odds / 100)
 
 
 def write_return(picks: list) -> None:
@@ -243,21 +246,21 @@ def write_return(picks: list) -> None:
     pending_count = sum(1 for p in picks if p["result"] == "pending")
 
     total_profit = 0.0
-    units_wagered = 0
+    total_wagered = 0.0
     for p in resolved:
         odds = parse_odds(p)
         if odds is None:
             continue
         total_profit += calc_profit(odds, p["result"])
-        units_wagered += 1
+        total_wagered += WAGER
 
-    return_pct = round(total_profit / units_wagered * 100, 1) if units_wagered else 0
+    return_pct = round(total_profit / total_wagered * 100, 1) if total_wagered else 0
     total_profit = round(total_profit, 2)
 
     data = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "total_profit": total_profit,
-        "units_wagered": units_wagered,
+        "total_wagered": total_wagered,
         "return_pct": return_pct,
         "wins": wins,
         "losses": losses,
@@ -268,7 +271,7 @@ def write_return(picks: list) -> None:
     }
 
     RETURN_PATH.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-    print(f"Return: {'+' if total_profit >= 0 else ''}{total_profit}u ({'+' if return_pct >= 0 else ''}{return_pct}%) | Record: {data['record_label']}")
+    print(f"Return: {'+' if total_profit >= 0 else ''}${total_profit:.2f} ({'+' if return_pct >= 0 else ''}{return_pct}%) | Record: {data['record_label']}")
 
 
 if __name__ == "__main__":

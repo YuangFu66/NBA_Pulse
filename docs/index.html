@@ -544,6 +544,7 @@
         const isPositive = profit >= 0;
         const sign = isPositive ? "+" : "";
         const colorClass = isPositive ? "wins" : "losses";
+        const profitStr = sign + "$" + Math.abs(profit).toFixed(2);
 
         const circumference = 2 * Math.PI * 72;
         const displayPct = Math.min(Math.abs(retPct), 100);
@@ -568,8 +569,8 @@
             </svg>
             <div class="accuracy-pct" style="font-size:2.2rem">${sign}${retPct}%</div>
           </div>
-          <div class="accuracy-record ${colorClass}">${sign}${profit}u</div>
-          <div class="accuracy-sublabel">Total Return (1u per pick)</div>
+          <div class="accuracy-record ${colorClass}">${profitStr}</div>
+          <div class="accuracy-sublabel">Total Return ($100 per pick)</div>
           <div class="accuracy-stats">
             <div class="accuracy-stat">
               <div class="accuracy-stat-val wins">${data.wins || 0}</div>
@@ -586,7 +587,7 @@
           </div>
           <p class="accuracy-note">
             ${data.record_label || "0-0"} record across ${data.total_picks || 0} picks.
-            Returns calculated at 1 unit per pick using line odds.
+            Returns calculated at $100 per pick using line odds.
           </p>
         `;
 
