@@ -1046,9 +1046,9 @@
       "home_team": "Boston Celtics",
       "away_team": "Philadelphia 76ers",
       "commence_time": "2026-04-28T23:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 97,
+      "away_score": 113
     },
     {
       "generated_at": "2026-04-28T10:08:49.322923+00:00",
@@ -1061,9 +1061,9 @@
       "home_team": "San Antonio Spurs",
       "away_team": "Portland Trail Blazers",
       "commence_time": "2026-04-29T01:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 114,
+      "away_score": 95
     },
     {
       "generated_at": "2026-04-28T10:08:49.322923+00:00",
@@ -1076,6 +1076,51 @@
       "home_team": "New York Knicks",
       "away_team": "Atlanta Hawks",
       "commence_time": "2026-04-29T00:10:00Z",
+      "result": "win",
+      "home_score": 126,
+      "away_score": 97
+    },
+    {
+      "generated_at": "2026-04-29T10:00:23.886885+00:00",
+      "team": "Los Angeles Lakers",
+      "type": "spread",
+      "spread_point": -4.5,
+      "title": "Buy Los Angeles Lakers -4.5",
+      "line": "Spread -4.5 at -105",
+      "matchup": "Houston Rockets at Los Angeles Lakers",
+      "home_team": "Los Angeles Lakers",
+      "away_team": "Houston Rockets",
+      "commence_time": "2026-04-30T02:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-29T10:00:23.886885+00:00",
+      "team": "Orlando Magic",
+      "type": "spread",
+      "spread_point": 10.5,
+      "title": "Buy Orlando Magic +10.5",
+      "line": "Spread +10.5 at -115",
+      "matchup": "Orlando Magic at Detroit Pistons",
+      "home_team": "Detroit Pistons",
+      "away_team": "Orlando Magic",
+      "commence_time": "2026-04-29T23:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-29T10:00:23.886885+00:00",
+      "team": "Cleveland Cavaliers",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Cleveland Cavaliers to win",
+      "line": "-375",
+      "matchup": "Toronto Raptors at Cleveland Cavaliers",
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Toronto Raptors",
+      "commence_time": "2026-04-29T23:40:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null
