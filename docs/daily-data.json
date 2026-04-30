@@ -1,45 +1,45 @@
 {
-  "generated_at": "2026-04-29T10:00:23.886885+00:00",
-  "generated_label": "Apr 29, 2026 10:00 AM UTC",
+  "generated_at": "2026-04-30T10:01:55.033046+00:00",
+  "generated_label": "Apr 30, 2026 10:01 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Detroit Pistons",
-      "away_team": "Orlando Magic",
-      "commence_time": "2026-04-29T23:10:00Z"
+      "home_team": "Atlanta Hawks",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-04-30T23:10:00Z"
     },
     {
-      "home_team": "Cleveland Cavaliers",
-      "away_team": "Toronto Raptors",
-      "commence_time": "2026-04-29T23:40:00Z"
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-05-01T00:10:00Z"
     },
     {
-      "home_team": "Los Angeles Lakers",
-      "away_team": "Houston Rockets",
-      "commence_time": "2026-04-30T02:10:00Z"
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "Denver Nuggets",
+      "commence_time": "2026-05-01T01:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 85.0,
-      "title": "Buy Los Angeles Lakers -4.5",
-      "line": "Spread -4.5 at -105",
-      "matchup": "Houston Rockets at Los Angeles Lakers",
-      "reason": "Recommendation: buy Los Angeles Lakers -4.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "score": 95.45,
+      "title": "Buy New York Knicks to win",
+      "line": "-148",
+      "matchup": "New York Knicks at Atlanta Hawks",
+      "reason": "Recommendation: buy New York Knicks on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
     },
     {
-      "score": 77.0,
-      "title": "Buy Orlando Magic +10.5",
-      "line": "Spread +10.5 at -115",
-      "matchup": "Orlando Magic at Detroit Pistons",
-      "reason": "Recommendation: buy Orlando Magic +10.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 78.0,
+      "title": "Buy Boston Celtics -5.5",
+      "line": "Spread -5.5 at -115",
+      "matchup": "Boston Celtics at Philadelphia 76ers",
+      "reason": "Recommendation: buy Boston Celtics -5.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     },
     {
-      "score": 51.400000000000006,
-      "title": "Buy Cleveland Cavaliers to win",
-      "line": "-375",
-      "matchup": "Toronto Raptors at Cleveland Cavaliers",
-      "reason": "Recommendation: buy Cleveland Cavaliers on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
+      "score": 78.0,
+      "title": "Buy Denver Nuggets -5.5",
+      "line": "Spread -5.5 at -115",
+      "matchup": "Denver Nuggets at Minnesota Timberwolves",
+      "reason": "Recommendation: buy Denver Nuggets -5.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
     }
   ]
 }

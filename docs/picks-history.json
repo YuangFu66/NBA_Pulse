@@ -1091,9 +1091,9 @@
       "home_team": "Los Angeles Lakers",
       "away_team": "Houston Rockets",
       "commence_time": "2026-04-30T02:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 93,
+      "away_score": 99
     },
     {
       "generated_at": "2026-04-29T10:00:23.886885+00:00",
@@ -1106,9 +1106,9 @@
       "home_team": "Detroit Pistons",
       "away_team": "Orlando Magic",
       "commence_time": "2026-04-29T23:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 116,
+      "away_score": 109
     },
     {
       "generated_at": "2026-04-29T10:00:23.886885+00:00",
@@ -1121,6 +1121,51 @@
       "home_team": "Cleveland Cavaliers",
       "away_team": "Toronto Raptors",
       "commence_time": "2026-04-29T23:40:00Z",
+      "result": "win",
+      "home_score": 125,
+      "away_score": 120
+    },
+    {
+      "generated_at": "2026-04-30T10:01:55.033046+00:00",
+      "team": "New York Knicks",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy New York Knicks to win",
+      "line": "-148",
+      "matchup": "New York Knicks at Atlanta Hawks",
+      "home_team": "Atlanta Hawks",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-04-30T23:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-30T10:01:55.033046+00:00",
+      "team": "Boston Celtics",
+      "type": "spread",
+      "spread_point": -5.5,
+      "title": "Buy Boston Celtics -5.5",
+      "line": "Spread -5.5 at -115",
+      "matchup": "Boston Celtics at Philadelphia 76ers",
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Boston Celtics",
+      "commence_time": "2026-05-01T00:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-04-30T10:01:55.033046+00:00",
+      "team": "Denver Nuggets",
+      "type": "spread",
+      "spread_point": -5.5,
+      "title": "Buy Denver Nuggets -5.5",
+      "line": "Spread -5.5 at -115",
+      "matchup": "Denver Nuggets at Minnesota Timberwolves",
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "Denver Nuggets",
+      "commence_time": "2026-05-01T01:40:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null
