@@ -1136,9 +1136,9 @@
       "home_team": "Atlanta Hawks",
       "away_team": "New York Knicks",
       "commence_time": "2026-04-30T23:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 89,
+      "away_score": 140
     },
     {
       "generated_at": "2026-04-30T10:01:55.033046+00:00",
@@ -1151,9 +1151,9 @@
       "home_team": "Philadelphia 76ers",
       "away_team": "Boston Celtics",
       "commence_time": "2026-05-01T00:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 106,
+      "away_score": 93
     },
     {
       "generated_at": "2026-04-30T10:01:55.033046+00:00",
@@ -1166,6 +1166,51 @@
       "home_team": "Minnesota Timberwolves",
       "away_team": "Denver Nuggets",
       "commence_time": "2026-05-01T01:40:00Z",
+      "result": "loss",
+      "home_score": 110,
+      "away_score": 98
+    },
+    {
+      "generated_at": "2026-05-01T09:28:09.964752+00:00",
+      "team": "Detroit Pistons",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Detroit Pistons -3.5",
+      "line": "Spread -3.5 at -110",
+      "matchup": "Detroit Pistons at Orlando Magic",
+      "home_team": "Orlando Magic",
+      "away_team": "Detroit Pistons",
+      "commence_time": "2026-05-01T23:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-05-01T09:28:09.964752+00:00",
+      "team": "Cleveland Cavaliers",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Cleveland Cavaliers -3.5",
+      "line": "Spread -3.5 at -115",
+      "matchup": "Cleveland Cavaliers at Toronto Raptors",
+      "home_team": "Toronto Raptors",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-01T23:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-05-01T09:28:09.964752+00:00",
+      "team": "Houston Rockets",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Houston Rockets -3.5",
+      "line": "Spread -3.5 at -112",
+      "matchup": "Los Angeles Lakers at Houston Rockets",
+      "home_team": "Houston Rockets",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-05-02T01:40:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null
