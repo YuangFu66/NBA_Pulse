@@ -1181,9 +1181,9 @@
       "home_team": "Orlando Magic",
       "away_team": "Detroit Pistons",
       "commence_time": "2026-05-01T23:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 79,
+      "away_score": 93
     },
     {
       "generated_at": "2026-05-01T09:28:09.964752+00:00",
@@ -1196,9 +1196,9 @@
       "home_team": "Toronto Raptors",
       "away_team": "Cleveland Cavaliers",
       "commence_time": "2026-05-01T23:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 112,
+      "away_score": 110
     },
     {
       "generated_at": "2026-05-01T09:28:09.964752+00:00",
@@ -1211,6 +1211,21 @@
       "home_team": "Houston Rockets",
       "away_team": "Los Angeles Lakers",
       "commence_time": "2026-05-02T01:40:00Z",
+      "result": "loss",
+      "home_score": 78,
+      "away_score": 98
+    },
+    {
+      "generated_at": "2026-05-02T09:00:11.471691+00:00",
+      "team": "Boston Celtics",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Boston Celtics to win",
+      "line": "-290",
+      "matchup": "Philadelphia 76ers at Boston Celtics",
+      "home_team": "Boston Celtics",
+      "away_team": "Philadelphia 76ers",
+      "commence_time": "2026-05-02T23:40:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null

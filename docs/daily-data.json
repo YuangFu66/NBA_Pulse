@@ -1,45 +1,21 @@
 {
-  "generated_at": "2026-05-01T09:28:09.964752+00:00",
-  "generated_label": "May 1, 2026 09:28 AM UTC",
+  "generated_at": "2026-05-02T09:00:11.471691+00:00",
+  "generated_label": "May 2, 2026 09:00 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Orlando Magic",
-      "away_team": "Detroit Pistons",
-      "commence_time": "2026-05-01T23:10:00Z"
-    },
-    {
-      "home_team": "Toronto Raptors",
-      "away_team": "Cleveland Cavaliers",
-      "commence_time": "2026-05-01T23:40:00Z"
-    },
-    {
-      "home_team": "Houston Rockets",
-      "away_team": "Los Angeles Lakers",
-      "commence_time": "2026-05-02T01:40:00Z"
+      "home_team": "Boston Celtics",
+      "away_team": "Philadelphia 76ers",
+      "commence_time": "2026-05-02T23:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 92.0,
-      "title": "Buy Detroit Pistons -3.5",
-      "line": "Spread -3.5 at -110",
-      "matchup": "Detroit Pistons at Orlando Magic",
-      "reason": "Recommendation: buy Detroit Pistons -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
-    },
-    {
-      "score": 92.0,
-      "title": "Buy Cleveland Cavaliers -3.5",
-      "line": "Spread -3.5 at -115",
-      "matchup": "Cleveland Cavaliers at Toronto Raptors",
-      "reason": "Recommendation: buy Cleveland Cavaliers -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
-    },
-    {
-      "score": 92.0,
-      "title": "Buy Houston Rockets -3.5",
-      "line": "Spread -3.5 at -112",
-      "matchup": "Los Angeles Lakers at Houston Rockets",
-      "reason": "Recommendation: buy Houston Rockets -3.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "score": 61.6,
+      "title": "Buy Boston Celtics to win",
+      "line": "-290",
+      "matchup": "Philadelphia 76ers at Boston Celtics",
+      "reason": "Recommendation: buy Boston Celtics on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
     }
   ]
 }
