@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-05-04T10:08:09.973486+00:00",
-  "generated_label": "May 4, 2026 10:08 AM UTC",
+  "generated_at": "2026-05-05T09:57:09.916240+00:00",
+  "generated_label": "May 5, 2026 09:57 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "New York Knicks",
-      "away_team": "Philadelphia 76ers",
-      "commence_time": "2026-05-05T00:10:00Z"
+      "home_team": "Detroit Pistons",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-05T23:10:00Z"
     },
     {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Minnesota Timberwolves",
-      "commence_time": "2026-05-05T01:40:00Z"
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-05-06T00:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 73.0,
-      "title": "Buy Minnesota Timberwolves +13.5",
-      "line": "Spread +13.5 at -115",
-      "matchup": "Minnesota Timberwolves at San Antonio Spurs",
-      "reason": "Recommendation: buy Minnesota Timberwolves +13.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
+      "score": 95.45,
+      "title": "Buy Detroit Pistons to win",
+      "line": "-148",
+      "matchup": "Cleveland Cavaliers at Detroit Pistons",
+      "reason": "Recommendation: buy Detroit Pistons on the moneyline. They sit in the strongest short-favorite zone on the board, which usually offers one of the better balances between win probability and price discipline. The market is backing them without pushing the number into a range where the cost becomes harder to justify."
     },
     {
-      "score": 61.6,
-      "title": "Buy New York Knicks to win",
-      "line": "-290",
-      "matchup": "Philadelphia 76ers at New York Knicks",
-      "reason": "Recommendation: buy New York Knicks on the moneyline. This is the strongest baseline side available in a matchup that does not land inside the tighter model windows for spreads or short favorites. The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
+      "score": 68.0,
+      "title": "Buy Los Angeles Lakers +15.5",
+      "line": "Spread +15.5 at -110",
+      "matchup": "Los Angeles Lakers at Oklahoma City Thunder",
+      "reason": "Recommendation: buy Los Angeles Lakers +15.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
     }
   ]
 }
