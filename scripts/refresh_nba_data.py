@@ -7,17 +7,18 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
 
+from prediction import (
+    MAX_RECOMMENDATIONS,
+    build_candidates,
+    candidate_to_dict,
+    select_top,
+)
+
 
 API_HOST = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds/"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATH = REPO_ROOT / "docs" / "daily-data.json"
 HISTORY_PATH = REPO_ROOT / "docs" / "picks-history.json"
-
-
-def american_to_probability(price: int) -> float:
-    if price < 0:
-        return (-price) / ((-price) + 100)
-    return 100 / (price + 100)
 
 
 def fetch_odds(api_key: str) -> list:
@@ -34,103 +35,12 @@ def fetch_odds(api_key: str) -> list:
         return json.loads(response.read().decode("utf-8"))
 
 
-def pick_outcomes(event: dict) -> dict:
-    bookmaker = event["bookmakers"][0]
-    markets = {market["key"]: market for market in bookmaker["markets"]}
-    h2h = {outcome["name"]: outcome["price"] for outcome in markets["h2h"]["outcomes"]}
-    spreads = {
-        outcome["name"]: {"point": outcome["point"], "price": outcome["price"]}
-        for outcome in markets["spreads"]["outcomes"]
-    }
-    return {"bookmaker": bookmaker, "h2h": h2h, "spreads": spreads}
-
-
 def format_record(event: dict) -> dict:
     return {
         "home_team": event["home_team"],
         "away_team": event["away_team"],
         "commence_time": event.get("commence_time"),
     }
-
-
-def build_candidates(event: dict) -> list:
-    parsed = pick_outcomes(event)
-    teams = [event["home_team"], event["away_team"]]
-    teams.sort(key=lambda team: american_to_probability(parsed["h2h"][team]), reverse=True)
-    favorite, underdog = teams[0], teams[1]
-
-    favorite_ml = parsed["h2h"][favorite]
-    favorite_spread = parsed["spreads"][favorite]
-    underdog_spread = parsed["spreads"][underdog]
-
-    matchup = f"{event['away_team']} at {event['home_team']}"
-    candidates = []
-
-    if -170 <= favorite_ml <= -110:
-        score = 100 - abs(abs(favorite_ml) - 135) * 0.35
-        candidates.append(
-            {
-                "score": score,
-                "title": f"Buy {favorite} to win",
-                "line": f"{favorite_ml:+d}",
-                "matchup": matchup,
-                "reason": (
-                    f"Recommendation: buy {favorite} on the moneyline. They sit in the strongest short-favorite zone on the board, "
-                    f"which usually offers one of the better balances between win probability and price discipline. "
-                    f"The market is backing them without pushing the number into a range where the cost becomes harder to justify."
-                ),
-            }
-        )
-
-    if favorite_spread["point"] <= -1.5 and favorite_spread["point"] >= -6.5:
-        score = 92 - abs(abs(favorite_spread["point"]) - 3.5) * 7 - max(0, abs(favorite_spread["price"]) - 115)
-        candidates.append(
-            {
-                "score": score,
-                "title": f"Buy {favorite} {favorite_spread['point']:+g}",
-                "line": f"Spread {favorite_spread['point']:+g} at {favorite_spread['price']:+d}",
-                "matchup": matchup,
-                "reason": (
-                    f"Recommendation: buy {favorite} {favorite_spread['point']:+g}. The spread is still inside a controlled range and the moneyline agrees, "
-                    f"which is usually where favorite-side value is most stable. "
-                    f"It gives this team a realistic path to covering without asking them to win by an inflated margin."
-                ),
-            }
-        )
-
-    if underdog_spread["point"] >= 9.5:
-        score = 84 - abs(underdog_spread["point"] - 11.5) * 4 - max(0, abs(underdog_spread["price"]) - 112)
-        candidates.append(
-            {
-                "score": score,
-                "title": f"Buy {underdog} +{underdog_spread['point']:g}",
-                "line": f"Spread +{underdog_spread['point']:g} at {underdog_spread['price']:+d}",
-                "matchup": matchup,
-                "reason": (
-                    f"Recommendation: buy {underdog} +{underdog_spread['point']:g}. The number gives a large scoring cushion at near-standard juice, "
-                    f"which can be attractive in NBA games where late swings make big favorites harder to trust. "
-                    f"That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
-                ),
-            }
-        )
-
-    if not candidates:
-        fallback_score = 76 - abs(abs(favorite_ml) - 170) * 0.12
-        candidates.append(
-            {
-                "score": fallback_score,
-                "title": f"Buy {favorite} to win",
-                "line": f"{favorite_ml:+d}",
-                "matchup": matchup,
-                "reason": (
-                    f"Recommendation: buy {favorite} on the moneyline. This is the strongest baseline side available in a matchup "
-                    f"that does not land inside the tighter model windows for spreads or short favorites. "
-                    f"The price is not ideal, but the market still shows them as the more stable side to back if you want exposure to this game."
-                ),
-            }
-        )
-
-    return candidates
 
 
 def is_today_la(commence_time: str) -> bool:
@@ -150,21 +60,13 @@ def build_payload(events: list) -> dict:
     # Only consider games happening today (LA time)
     todays_events = [e for e in events if is_today_la(e.get("commence_time", ""))]
 
-    candidates = []
+    all_candidates = []
     analyzed_games = []
     for event in todays_events:
         analyzed_games.append(format_record(event))
-        candidates.extend(build_candidates(event))
+        all_candidates.extend(build_candidates(event))
 
-    top = []
-    seen_matchups = set()
-    for item in sorted(candidates, key=lambda entry: entry["score"], reverse=True):
-        if item["matchup"] in seen_matchups:
-            continue
-        top.append(item)
-        seen_matchups.add(item["matchup"])
-        if len(top) == 3:
-            break
+    top = [candidate_to_dict(c) for c in select_top(all_candidates, MAX_RECOMMENDATIONS)]
 
     return {
         "generated_at": now.isoformat(),
