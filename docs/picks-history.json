@@ -1301,9 +1301,9 @@
       "home_team": "Detroit Pistons",
       "away_team": "Cleveland Cavaliers",
       "commence_time": "2026-05-05T23:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 111,
+      "away_score": 101
     },
     {
       "generated_at": "2026-05-05T09:57:09.916240+00:00",
@@ -1316,9 +1316,39 @@
       "home_team": "Oklahoma City Thunder",
       "away_team": "Los Angeles Lakers",
       "commence_time": "2026-05-06T00:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 108,
+      "away_score": 90
+    },
+    {
+      "generated_at": "2026-05-06T10:11:31.779936+00:00",
+      "team": "Minnesota Timberwolves",
+      "type": "spread",
+      "spread_point": 9.5,
+      "title": "Buy Minnesota Timberwolves +9.5",
+      "line": "Spread +9.5 at -105",
+      "matchup": "Minnesota Timberwolves at San Antonio Spurs",
+      "home_team": "San Antonio Spurs",
+      "away_team": "Minnesota Timberwolves",
+      "commence_time": "2026-05-07T01:40:00Z",
+      "result": "win",
+      "home_score": 102,
+      "away_score": 104
+    },
+    {
+      "generated_at": "2026-05-06T10:11:31.779936+00:00",
+      "team": "New York Knicks",
+      "type": "spread",
+      "spread_point": -6.5,
+      "title": "Buy New York Knicks -6.5",
+      "line": "Spread -6.5 at -115",
+      "matchup": "Philadelphia 76ers at New York Knicks",
+      "home_team": "New York Knicks",
+      "away_team": "Philadelphia 76ers",
+      "commence_time": "2026-05-06T23:10:00Z",
+      "result": "win",
+      "home_score": 137,
+      "away_score": 98
     }
   ]
 }
