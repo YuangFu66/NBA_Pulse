@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-06T10:11:31.779936+00:00",
-  "generated_label": "May 6, 2026 10:11 AM UTC",
+  "generated_at": "2026-05-06T17:19:51.476406+00:00",
+  "generated_label": "May 6, 2026 05:19 PM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
@@ -16,18 +16,11 @@
   ],
   "recommendations": [
     {
-      "score": 76.0,
-      "title": "Buy Minnesota Timberwolves +9.5",
-      "line": "Spread +9.5 at -105",
+      "score": 0.53,
+      "title": "Buy San Antonio Spurs -10.5",
+      "line": "Spread -10.5 at -102",
       "matchup": "Minnesota Timberwolves at San Antonio Spurs",
-      "reason": "Recommendation: buy Minnesota Timberwolves +9.5. The number gives a large scoring cushion at near-standard juice, which can be attractive in NBA games where late swings make big favorites harder to trust. That extra room matters most when the underdog can stay competitive for stretches even if they do not win outright."
-    },
-    {
-      "score": 71.0,
-      "title": "Buy New York Knicks -6.5",
-      "line": "Spread -6.5 at -115",
-      "matchup": "Philadelphia 76ers at New York Knicks",
-      "reason": "Recommendation: buy New York Knicks -6.5. The spread is still inside a controlled range and the moneyline agrees, which is usually where favorite-side value is most stable. It gives this team a realistic path to covering without asking them to win by an inflated margin."
+      "reason": "Recommendation: buy San Antonio Spurs -10.5 at home. The no-vig spread market gives them about a 48% chance to cover, and after our home-court and bucket adjustments we land near 51%. Priced at -102, that works out to roughly +0.5% expected value per dollar, so the side clears our minimum-edge filter."
     }
   ]
 }

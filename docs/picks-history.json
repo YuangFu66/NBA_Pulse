@@ -1349,6 +1349,21 @@
       "result": "win",
       "home_score": 137,
       "away_score": 98
+    },
+    {
+      "generated_at": "2026-05-06T17:19:51.476406+00:00",
+      "team": "San Antonio Spurs",
+      "type": "spread",
+      "spread_point": -10.5,
+      "title": "Buy San Antonio Spurs -10.5",
+      "line": "Spread -10.5 at -102",
+      "matchup": "Minnesota Timberwolves at San Antonio Spurs",
+      "home_team": "San Antonio Spurs",
+      "away_team": "Minnesota Timberwolves",
+      "commence_time": "2026-05-07T01:40:00Z",
+      "result": "loss",
+      "home_score": 102,
+      "away_score": 104
     }
   ]
 }
