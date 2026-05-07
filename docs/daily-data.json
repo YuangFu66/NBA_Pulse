@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-05-06T17:19:51.476406+00:00",
-  "generated_label": "May 6, 2026 05:19 PM UTC",
+  "generated_at": "2026-05-07T10:18:05.392574+00:00",
+  "generated_label": "May 7, 2026 10:18 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "New York Knicks",
-      "away_team": "Philadelphia 76ers",
-      "commence_time": "2026-05-06T23:10:00Z"
+      "home_team": "Detroit Pistons",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-07T23:10:00Z"
     },
     {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Minnesota Timberwolves",
-      "commence_time": "2026-05-07T01:40:00Z"
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Los Angeles Lakers",
+      "commence_time": "2026-05-08T01:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 0.53,
-      "title": "Buy San Antonio Spurs -10.5",
-      "line": "Spread -10.5 at -102",
-      "matchup": "Minnesota Timberwolves at San Antonio Spurs",
-      "reason": "Recommendation: buy San Antonio Spurs -10.5 at home. The no-vig spread market gives them about a 48% chance to cover, and after our home-court and bucket adjustments we land near 51%. Priced at -102, that works out to roughly +0.5% expected value per dollar, so the side clears our minimum-edge filter."
+      "score": 4.05,
+      "title": "Buy Detroit Pistons -3.5",
+      "line": "Spread -3.5 at -110",
+      "matchup": "Cleveland Cavaliers at Detroit Pistons",
+      "reason": "Recommendation: buy Detroit Pistons -3.5 at home. The no-vig spread market gives them about a 50% chance to cover, and after our home-court and bucket adjustments we land near 55%. Priced at -110, that works out to roughly +4.0% expected value per dollar, so the side clears our minimum-edge filter."
     }
   ]
 }
