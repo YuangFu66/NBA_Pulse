@@ -1379,6 +1379,21 @@
       "result": "win",
       "home_score": 111,
       "away_score": 101
+    },
+    {
+      "generated_at": "2026-05-08T09:10:25.628786+00:00",
+      "team": "Minnesota Timberwolves",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Minnesota Timberwolves to win",
+      "line": "+164",
+      "matchup": "San Antonio Spurs at Minnesota Timberwolves",
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-09T01:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }
