@@ -1406,9 +1406,39 @@
       "home_team": "Cleveland Cavaliers",
       "away_team": "Detroit Pistons",
       "commence_time": "2026-05-09T19:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "win",
+      "home_score": 116,
+      "away_score": 109
+    },
+    {
+      "generated_at": "2026-05-10T09:24:24.152517+00:00",
+      "team": "Minnesota Timberwolves",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Minnesota Timberwolves to win",
+      "line": "+154",
+      "matchup": "San Antonio Spurs at Minnesota Timberwolves",
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-10T23:40:00Z",
+      "result": "loss",
+      "home_score": 108,
+      "away_score": 115
+    },
+    {
+      "generated_at": "2026-05-10T09:24:24.152517+00:00",
+      "team": "Philadelphia 76ers",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Philadelphia 76ers to win",
+      "line": "+102",
+      "matchup": "New York Knicks at Philadelphia 76ers",
+      "home_team": "Philadelphia 76ers",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-05-10T19:40:00Z",
+      "result": "loss",
+      "home_score": 94,
+      "away_score": 108
     }
   ]
 }

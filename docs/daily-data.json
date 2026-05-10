@@ -1,26 +1,33 @@
 {
-  "generated_at": "2026-05-09T09:12:53.741533+00:00",
-  "generated_label": "May 9, 2026 09:12 AM UTC",
+  "generated_at": "2026-05-10T09:24:24.152517+00:00",
+  "generated_label": "May 10, 2026 09:24 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Cleveland Cavaliers",
-      "away_team": "Detroit Pistons",
-      "commence_time": "2026-05-09T19:10:00Z"
+      "home_team": "Philadelphia 76ers",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-05-10T19:40:00Z"
     },
     {
-      "home_team": "Los Angeles Lakers",
-      "away_team": "Oklahoma City Thunder",
-      "commence_time": "2026-05-10T00:40:00Z"
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-10T23:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 4.29,
-      "title": "Buy Cleveland Cavaliers -4.5",
-      "line": "Spread -4.5 at -105",
-      "matchup": "Detroit Pistons at Cleveland Cavaliers",
-      "reason": "Recommendation: buy Cleveland Cavaliers -4.5 at home. The no-vig spread market gives them about a 49% chance to cover, and after our home-court and bucket adjustments we land near 53%. Priced at -105, that works out to roughly +4.3% expected value per dollar, so the side clears our minimum-edge filter."
+      "score": 2.24,
+      "title": "Buy Minnesota Timberwolves to win",
+      "line": "+154",
+      "matchup": "San Antonio Spurs at Minnesota Timberwolves",
+      "reason": "Recommendation: buy Minnesota Timberwolves on the moneyline at home. Stripping the book's vig puts their fair win probability around 38%, and after adjusting for our home-court signal and historical bucket performance we estimate 40%. At +154 that is roughly +2.2% expected value per dollar, which is the threshold this model requires before flagging a side."
+    },
+    {
+      "score": 0.78,
+      "title": "Buy Philadelphia 76ers to win",
+      "line": "+102",
+      "matchup": "New York Knicks at Philadelphia 76ers",
+      "reason": "Recommendation: buy Philadelphia 76ers on the moneyline at home. Stripping the book's vig puts their fair win probability around 47%, and after adjusting for our home-court signal and historical bucket performance we estimate 50%. At +102 that is roughly +0.8% expected value per dollar, which is the threshold this model requires before flagging a side."
     }
   ]
 }
