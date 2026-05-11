@@ -1,33 +1,26 @@
 {
-  "generated_at": "2026-05-10T09:24:24.152517+00:00",
-  "generated_label": "May 10, 2026 09:24 AM UTC",
+  "generated_at": "2026-05-11T10:56:01.241933+00:00",
+  "generated_label": "May 11, 2026 10:56 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Philadelphia 76ers",
-      "away_team": "New York Knicks",
-      "commence_time": "2026-05-10T19:40:00Z"
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Detroit Pistons",
+      "commence_time": "2026-05-12T00:00:00Z"
     },
     {
-      "home_team": "Minnesota Timberwolves",
-      "away_team": "San Antonio Spurs",
-      "commence_time": "2026-05-10T23:40:00Z"
+      "home_team": "Los Angeles Lakers",
+      "away_team": "Oklahoma City Thunder",
+      "commence_time": "2026-05-12T02:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 2.24,
-      "title": "Buy Minnesota Timberwolves to win",
-      "line": "+154",
-      "matchup": "San Antonio Spurs at Minnesota Timberwolves",
-      "reason": "Recommendation: buy Minnesota Timberwolves on the moneyline at home. Stripping the book's vig puts their fair win probability around 38%, and after adjusting for our home-court signal and historical bucket performance we estimate 40%. At +154 that is roughly +2.2% expected value per dollar, which is the threshold this model requires before flagging a side."
-    },
-    {
-      "score": 0.78,
-      "title": "Buy Philadelphia 76ers to win",
-      "line": "+102",
-      "matchup": "New York Knicks at Philadelphia 76ers",
-      "reason": "Recommendation: buy Philadelphia 76ers on the moneyline at home. Stripping the book's vig puts their fair win probability around 47%, and after adjusting for our home-court signal and historical bucket performance we estimate 50%. At +102 that is roughly +0.8% expected value per dollar, which is the threshold this model requires before flagging a side."
+      "score": 4.05,
+      "title": "Buy Cleveland Cavaliers -3.5",
+      "line": "Spread -3.5 at -110",
+      "matchup": "Detroit Pistons at Cleveland Cavaliers",
+      "reason": "Recommendation: buy Cleveland Cavaliers -3.5 at home. The no-vig spread market gives them about a 50% chance to cover, and after our home-court and bucket adjustments we land near 55%. Priced at -110, that works out to roughly +4.0% expected value per dollar, so the side clears our minimum-edge filter."
     }
   ]
 }
