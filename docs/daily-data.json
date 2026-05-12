@@ -1,26 +1,13 @@
 {
-  "generated_at": "2026-05-11T10:56:01.241933+00:00",
-  "generated_label": "May 11, 2026 10:56 AM UTC",
+  "generated_at": "2026-05-12T10:26:50.037483+00:00",
+  "generated_label": "May 12, 2026 10:26 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "Cleveland Cavaliers",
-      "away_team": "Detroit Pistons",
-      "commence_time": "2026-05-12T00:00:00Z"
-    },
-    {
-      "home_team": "Los Angeles Lakers",
-      "away_team": "Oklahoma City Thunder",
-      "commence_time": "2026-05-12T02:40:00Z"
+      "home_team": "San Antonio Spurs",
+      "away_team": "Minnesota Timberwolves",
+      "commence_time": "2026-05-13T00:10:00Z"
     }
   ],
-  "recommendations": [
-    {
-      "score": 4.05,
-      "title": "Buy Cleveland Cavaliers -3.5",
-      "line": "Spread -3.5 at -110",
-      "matchup": "Detroit Pistons at Cleveland Cavaliers",
-      "reason": "Recommendation: buy Cleveland Cavaliers -3.5 at home. The no-vig spread market gives them about a 50% chance to cover, and after our home-court and bucket adjustments we land near 55%. Priced at -110, that works out to roughly +4.0% expected value per dollar, so the side clears our minimum-edge filter."
-    }
-  ]
+  "recommendations": []
 }
