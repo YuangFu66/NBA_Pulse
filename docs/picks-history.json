@@ -1454,6 +1454,21 @@
       "result": "win",
       "home_score": 116,
       "away_score": 109
+    },
+    {
+      "generated_at": "2026-05-13T10:18:13.864917+00:00",
+      "team": "Detroit Pistons",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Detroit Pistons -3.5",
+      "line": "Spread -3.5 at -118",
+      "matchup": "Cleveland Cavaliers at Detroit Pistons",
+      "home_team": "Detroit Pistons",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-14T00:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }
