@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-05-13T10:18:13.864917+00:00",
-  "generated_label": "May 13, 2026 10:18 AM UTC",
+  "generated_at": "2026-05-14T10:10:09.686998+00:00",
+  "generated_label": "May 14, 2026 10:10 AM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [
-    {
-      "home_team": "Detroit Pistons",
-      "away_team": "Cleveland Cavaliers",
-      "commence_time": "2026-05-14T00:10:00Z"
-    }
-  ],
-  "recommendations": [
-    {
-      "score": 3.89,
-      "title": "Buy Detroit Pistons -3.5",
-      "line": "Spread -3.5 at -118",
-      "matchup": "Cleveland Cavaliers at Detroit Pistons",
-      "reason": "Recommendation: buy Detroit Pistons -3.5 at home. The no-vig spread market gives them about a 52% chance to cover, and after our home-court and bucket adjustments we land near 56%. Priced at -118, that works out to roughly +3.9% expected value per dollar, so the side clears our minimum-edge filter."
-    }
-  ]
+  "games_analyzed": [],
+  "recommendations": []
 }
