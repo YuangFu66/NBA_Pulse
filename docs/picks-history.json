@@ -1469,6 +1469,36 @@
       "result": "loss",
       "home_score": 113,
       "away_score": 117
+    },
+    {
+      "generated_at": "2026-05-15T10:15:47.059237+00:00",
+      "team": "Cleveland Cavaliers",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Cleveland Cavaliers -3.5",
+      "line": "Spread -3.5 at -118",
+      "matchup": "Detroit Pistons at Cleveland Cavaliers",
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Detroit Pistons",
+      "commence_time": "2026-05-15T23:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "generated_at": "2026-05-15T10:15:47.059237+00:00",
+      "team": "Minnesota Timberwolves",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Minnesota Timberwolves to win",
+      "line": "+170",
+      "matchup": "San Antonio Spurs at Minnesota Timberwolves",
+      "home_team": "Minnesota Timberwolves",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-16T01:40:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }
