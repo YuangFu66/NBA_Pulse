@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-05-15T10:15:47.059237+00:00",
-  "generated_label": "May 15, 2026 10:15 AM UTC",
+  "generated_at": "2026-05-16T09:25:34.122687+00:00",
+  "generated_label": "May 16, 2026 09:25 AM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [
-    {
-      "home_team": "Cleveland Cavaliers",
-      "away_team": "Detroit Pistons",
-      "commence_time": "2026-05-15T23:10:00Z"
-    },
-    {
-      "home_team": "Minnesota Timberwolves",
-      "away_team": "San Antonio Spurs",
-      "commence_time": "2026-05-16T01:40:00Z"
-    }
-  ],
-  "recommendations": [
-    {
-      "score": 3.89,
-      "title": "Buy Cleveland Cavaliers -3.5",
-      "line": "Spread -3.5 at -118",
-      "matchup": "Detroit Pistons at Cleveland Cavaliers",
-      "reason": "Recommendation: buy Cleveland Cavaliers -3.5 at home. The no-vig spread market gives them about a 52% chance to cover, and after our home-court and bucket adjustments we land near 56%. Priced at -118, that works out to roughly +3.9% expected value per dollar, so the side clears our minimum-edge filter."
-    },
-    {
-      "score": 2.67,
-      "title": "Buy Minnesota Timberwolves to win",
-      "line": "+170",
-      "matchup": "San Antonio Spurs at Minnesota Timberwolves",
-      "reason": "Recommendation: buy Minnesota Timberwolves on the moneyline at home. Stripping the book's vig puts their fair win probability around 36%, and after adjusting for our home-court signal and historical bucket performance we estimate 38%. At +170 that is roughly +2.7% expected value per dollar, which is the threshold this model requires before flagging a side."
-    }
-  ]
+  "games_analyzed": [],
+  "recommendations": []
 }

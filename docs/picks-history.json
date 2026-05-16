@@ -1481,9 +1481,9 @@
       "home_team": "Cleveland Cavaliers",
       "away_team": "Detroit Pistons",
       "commence_time": "2026-05-15T23:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 94,
+      "away_score": 115
     },
     {
       "generated_at": "2026-05-15T10:15:47.059237+00:00",
@@ -1496,9 +1496,9 @@
       "home_team": "Minnesota Timberwolves",
       "away_team": "San Antonio Spurs",
       "commence_time": "2026-05-16T01:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 109,
+      "away_score": 139
     }
   ]
 }
