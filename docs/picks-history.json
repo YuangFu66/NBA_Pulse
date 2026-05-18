@@ -1511,6 +1511,21 @@
       "home_team": "Detroit Pistons",
       "away_team": "Cleveland Cavaliers",
       "commence_time": "2026-05-18T00:10:00Z",
+      "result": "loss",
+      "home_score": 94,
+      "away_score": 125
+    },
+    {
+      "generated_at": "2026-05-18T11:39:59.471535+00:00",
+      "team": "Oklahoma City Thunder",
+      "type": "spread",
+      "spread_point": -6.5,
+      "title": "Buy Oklahoma City Thunder -6.5",
+      "line": "Spread -6.5 at -110",
+      "matchup": "San Antonio Spurs at Oklahoma City Thunder",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-19T00:40:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null
