@@ -1526,6 +1526,21 @@
       "home_team": "Oklahoma City Thunder",
       "away_team": "San Antonio Spurs",
       "commence_time": "2026-05-19T00:40:00Z",
+      "result": "loss",
+      "home_score": 115,
+      "away_score": 122
+    },
+    {
+      "generated_at": "2026-05-19T10:57:21.187960+00:00",
+      "team": "New York Knicks",
+      "type": "spread",
+      "spread_point": -7.5,
+      "title": "Buy New York Knicks -7.5",
+      "line": "Spread -7.5 at -105",
+      "matchup": "Cleveland Cavaliers at New York Knicks",
+      "home_team": "New York Knicks",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-20T00:10:00Z",
       "result": "pending",
       "home_score": null,
       "away_score": null
