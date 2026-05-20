@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-05-19T10:57:21.187960+00:00",
-  "generated_label": "May 19, 2026 10:57 AM UTC",
+  "generated_at": "2026-05-20T10:45:20.358898+00:00",
+  "generated_label": "May 20, 2026 10:45 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "New York Knicks",
-      "away_team": "Cleveland Cavaliers",
-      "commence_time": "2026-05-20T00:10:00Z"
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-21T00:40:00Z"
     }
   ],
   "recommendations": [
     {
-      "score": 4.29,
-      "title": "Buy New York Knicks -7.5",
-      "line": "Spread -7.5 at -105",
-      "matchup": "Cleveland Cavaliers at New York Knicks",
-      "reason": "Recommendation: buy New York Knicks -7.5 at home. The no-vig spread market gives them about a 49% chance to cover, and after our home-court and bucket adjustments we land near 53%. Priced at -105, that works out to roughly +4.3% expected value per dollar, so the side clears our minimum-edge filter."
+      "score": 4.05,
+      "title": "Buy Oklahoma City Thunder -6.5",
+      "line": "Spread -6.5 at -110",
+      "matchup": "San Antonio Spurs at Oklahoma City Thunder",
+      "reason": "Recommendation: buy Oklahoma City Thunder -6.5 at home. The no-vig spread market gives them about a 50% chance to cover, and after our home-court and bucket adjustments we land near 55%. Priced at -110, that works out to roughly +4.0% expected value per dollar, so the side clears our minimum-edge filter."
     }
   ]
 }
