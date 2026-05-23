@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-22T10:44:18.068816+00:00",
-  "generated_label": "May 22, 2026 10:44 AM UTC",
+  "generated_at": "2026-05-23T09:45:47.026275+00:00",
+  "generated_label": "May 23, 2026 09:45 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Oklahoma City Thunder",
-      "commence_time": "2026-05-23T00:40:00Z"
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-05-24T00:10:00Z"
     }
   ],
   "recommendations": []
