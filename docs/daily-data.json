@@ -1,13 +1,21 @@
 {
-  "generated_at": "2026-05-24T09:49:46.828985+00:00",
-  "generated_label": "May 24, 2026 09:49 AM UTC",
+  "generated_at": "2026-05-25T11:48:19.593909+00:00",
+  "generated_label": "May 25, 2026 11:48 AM UTC",
   "bookmaker_title": "DraftKings",
   "games_analyzed": [
     {
-      "home_team": "San Antonio Spurs",
-      "away_team": "Oklahoma City Thunder",
-      "commence_time": "2026-05-25T00:10:00Z"
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-05-26T00:10:00Z"
     }
   ],
-  "recommendations": []
+  "recommendations": [
+    {
+      "score": 1.53,
+      "title": "Buy Cleveland Cavaliers to win",
+      "line": "+120",
+      "matchup": "New York Knicks at Cleveland Cavaliers",
+      "reason": "Recommendation: buy Cleveland Cavaliers on the moneyline at home. Stripping the book's vig puts their fair win probability around 44%, and after adjusting for our home-court signal and historical bucket performance we estimate 46%. At +120 that is roughly +1.5% expected value per dollar, which is the threshold this model requires before flagging a side."
+    }
+  ]
 }

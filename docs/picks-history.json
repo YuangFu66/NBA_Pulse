@@ -1574,6 +1574,21 @@
       "result": "win",
       "home_score": 115,
       "away_score": 104
+    },
+    {
+      "generated_at": "2026-05-25T11:48:19.593909+00:00",
+      "team": "Cleveland Cavaliers",
+      "type": "moneyline",
+      "spread_point": null,
+      "title": "Buy Cleveland Cavaliers to win",
+      "line": "+120",
+      "matchup": "New York Knicks at Cleveland Cavaliers",
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-05-26T00:10:00Z",
+      "result": "loss",
+      "home_score": 108,
+      "away_score": 121
     }
   ]
 }
