@@ -1604,6 +1604,21 @@
       "result": "win",
       "home_score": 118,
       "away_score": 91
+    },
+    {
+      "generated_at": "2026-05-30T09:53:08.163018+00:00",
+      "team": "Oklahoma City Thunder",
+      "type": "spread",
+      "spread_point": -3.5,
+      "title": "Buy Oklahoma City Thunder -3.5",
+      "line": "Spread -3.5 at -112",
+      "matchup": "San Antonio Spurs at Oklahoma City Thunder",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-31T00:10:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }

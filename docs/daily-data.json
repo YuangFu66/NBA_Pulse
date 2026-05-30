@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-05-29T11:22:49.894037+00:00",
-  "generated_label": "May 29, 2026 11:22 AM UTC",
+  "generated_at": "2026-05-30T09:53:08.163018+00:00",
+  "generated_label": "May 30, 2026 09:53 AM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [],
-  "recommendations": []
+  "games_analyzed": [
+    {
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-31T00:10:00Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "score": 3.98,
+      "title": "Buy Oklahoma City Thunder -3.5",
+      "line": "Spread -3.5 at -112",
+      "matchup": "San Antonio Spurs at Oklahoma City Thunder",
+      "reason": "Recommendation: buy Oklahoma City Thunder -3.5 at home. The no-vig spread market gives them about a 50% chance to cover, and after our home-court and bucket adjustments we land near 55%. Priced at -112, that works out to roughly +4.0% expected value per dollar, so the side clears our minimum-edge filter."
+    }
+  ]
 }
