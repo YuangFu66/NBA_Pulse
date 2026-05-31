@@ -1616,9 +1616,9 @@
       "home_team": "Oklahoma City Thunder",
       "away_team": "San Antonio Spurs",
       "commence_time": "2026-05-31T00:10:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 103,
+      "away_score": 111
     }
   ]
 }
