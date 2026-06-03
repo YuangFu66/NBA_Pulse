@@ -1619,6 +1619,21 @@
       "result": "loss",
       "home_score": 103,
       "away_score": 111
+    },
+    {
+      "generated_at": "2026-06-03T12:37:36.234896+00:00",
+      "team": "San Antonio Spurs",
+      "type": "spread",
+      "spread_point": -4.5,
+      "title": "Buy San Antonio Spurs -4.5",
+      "line": "Spread -4.5 at -112",
+      "matchup": "New York Knicks at San Antonio Spurs",
+      "home_team": "San Antonio Spurs",
+      "away_team": "New York Knicks",
+      "commence_time": "2026-06-04T00:30:00Z",
+      "result": "pending",
+      "home_score": null,
+      "away_score": null
     }
   ]
 }
