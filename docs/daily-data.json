@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-06-05T11:21:11.675013+00:00",
-  "generated_label": "Jun 5, 2026 11:21 AM UTC",
+  "generated_at": "2026-06-06T09:57:56.509510+00:00",
+  "generated_label": "Jun 6, 2026 09:57 AM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [
-    {
-      "home_team": "San Antonio Spurs",
-      "away_team": "New York Knicks",
-      "commence_time": "2026-06-06T00:40:00Z"
-    }
-  ],
-  "recommendations": [
-    {
-      "score": 4.49,
-      "title": "Buy San Antonio Spurs -6.5",
-      "line": "Spread -6.5 at -102",
-      "matchup": "New York Knicks at San Antonio Spurs",
-      "reason": "Recommendation: buy San Antonio Spurs -6.5 at home. The no-vig spread market gives them about a 48% chance to cover, and after our home-court and bucket adjustments we land near 53%. Priced at -102, that works out to roughly +4.5% expected value per dollar, so the side clears our minimum-edge filter."
-    }
-  ]
+  "games_analyzed": [],
+  "recommendations": []
 }
