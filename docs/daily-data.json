@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-06-07T10:23:54.043157+00:00",
-  "generated_label": "Jun 7, 2026 10:23 AM UTC",
+  "generated_at": "2026-06-08T12:23:25.282203+00:00",
+  "generated_label": "Jun 8, 2026 12:23 PM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [],
-  "recommendations": []
+  "games_analyzed": [
+    {
+      "home_team": "New York Knicks",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-06-09T00:40:00Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "score": 0.53,
+      "title": "Buy New York Knicks -2.5",
+      "line": "Spread -2.5 at -102",
+      "matchup": "San Antonio Spurs at New York Knicks",
+      "reason": "Recommendation: buy New York Knicks -2.5 at home. The no-vig spread market gives them about a 48% chance to cover, and after our home-court and bucket adjustments we land near 51%. Priced at -102, that works out to roughly +0.5% expected value per dollar, so the side clears our minimum-edge filter."
+    }
+  ]
 }
