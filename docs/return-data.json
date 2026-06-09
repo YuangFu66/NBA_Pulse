@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-08T12:23:25.702216+00:00",
-  "total_profit": -841.24,
-  "total_wagered": 11000.0,
-  "return_pct": -7.6,
+  "updated_at": "2026-06-09T10:55:20.007522+00:00",
+  "total_profit": -941.24,
+  "total_wagered": 11100.0,
+  "return_pct": -8.5,
   "wins": 56,
-  "losses": 54,
+  "losses": 55,
   "pushes": 0,
-  "pending": 1,
+  "pending": 0,
   "total_picks": 111,
-  "record_label": "56-54"
+  "record_label": "56-55"
 }
