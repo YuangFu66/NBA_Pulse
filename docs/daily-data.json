@@ -1,13 +1,7 @@
 {
-  "generated_at": "2026-06-10T11:34:17.746010+00:00",
-  "generated_label": "Jun 10, 2026 11:34 AM UTC",
+  "generated_at": "2026-06-11T12:05:20.313446+00:00",
+  "generated_label": "Jun 11, 2026 12:05 PM UTC",
   "bookmaker_title": "DraftKings",
-  "games_analyzed": [
-    {
-      "home_team": "New York Knicks",
-      "away_team": "San Antonio Spurs",
-      "commence_time": "2026-06-11T00:40:00Z"
-    }
-  ],
+  "games_analyzed": [],
   "recommendations": []
 }
