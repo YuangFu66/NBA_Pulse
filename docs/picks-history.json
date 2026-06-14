@@ -1676,9 +1676,9 @@
       "home_team": "San Antonio Spurs",
       "away_team": "New York Knicks",
       "commence_time": "2026-06-14T00:40:00Z",
-      "result": "pending",
-      "home_score": null,
-      "away_score": null
+      "result": "loss",
+      "home_score": 90,
+      "away_score": 94
     }
   ]
 }
